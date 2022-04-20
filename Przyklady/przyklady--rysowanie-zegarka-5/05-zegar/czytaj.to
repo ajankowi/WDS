@@ -1,0 +1,13 @@
+Przykład demonstruje wykorzystanie obiektu klasy QTimer
+do implementacji zegara. Demonstruje również wpływ ustawień
+lokalizacji narodowej (locale).
+
+Zmiana domyślnych ustawień sposobu wyświetlania zegarka
+przez zmianę zmiennych odpowiadających za lokalizację narodową.
+np.
+  export LC_ALL=pl_PL.utf8
+
+lub
+  export LC_ALL=en_US.utf8
+
+lub inne, które są dostępne.

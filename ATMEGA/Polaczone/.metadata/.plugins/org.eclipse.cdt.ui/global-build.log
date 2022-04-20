@@ -1,0 +1,768 @@
+11:58:14 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:58:22 **** Clean-only build of configuration Release for project polacz ****
+make clean 
+rm -rf  polacz.hex  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o  polacz.eep  sizedummy  polacz.lss  ./util/2cmaster.d ./util/millis.d  ./HD44780.d ./StepMotor.d ./VL53L0X.d ./main.d  polacz.elf
+ 
+11:58:22 **** Build of configuration Release for project polacz ****
+make all 
+Building file: ../util/2cmaster.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"util/2cmaster.d" -MT"util/2cmaster.o" -c -o "util/2cmaster.o" "../util/2cmaster.c"
+Finished building: ../util/2cmaster.c
+ 
+Building file: ../util/millis.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"util/millis.d" -MT"util/millis.o" -c -o "util/millis.o" "../util/millis.c"
+Finished building: ../util/millis.c
+ 
+Building file: ../HD44780.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HD44780.d" -MT"HD44780.o" -c -o "HD44780.o" "../HD44780.c"
+Finished building: ../HD44780.c
+ 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+Finished building: ../StepMotor.c
+ 
+Building file: ../VL53L0X.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"VL53L0X.d" -MT"VL53L0X.o" -c -o "VL53L0X.o" "../VL53L0X.c"
+Finished building: ../VL53L0X.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:30:1: warning: "sbi" redefined
+In file included from ../main.c:16:
+../StepMotor.h:63:1: warning: this is the location of the previous definition
+../main.c:31:1: warning: "cbi" redefined
+../StepMotor.h:67:1: warning: this is the location of the previous definition
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:58:49 **** Clean-only build of configuration Release for project polacz ****
+make clean 
+rm -rf  polacz.hex  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o  polacz.eep  sizedummy  polacz.lss  ./util/2cmaster.d ./util/millis.d  ./HD44780.d ./StepMotor.d ./VL53L0X.d ./main.d  polacz.elf
+ 
+11:58:49 **** Build of configuration Release for project polacz ****
+make all 
+Building file: ../util/2cmaster.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"util/2cmaster.d" -MT"util/2cmaster.o" -c -o "util/2cmaster.o" "../util/2cmaster.c"
+Finished building: ../util/2cmaster.c
+ 
+Building file: ../util/millis.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"util/millis.d" -MT"util/millis.o" -c -o "util/millis.o" "../util/millis.c"
+Finished building: ../util/millis.c
+ 
+Building file: ../HD44780.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HD44780.d" -MT"HD44780.o" -c -o "HD44780.o" "../HD44780.c"
+Finished building: ../HD44780.c
+ 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+Finished building: ../StepMotor.c
+ 
+Building file: ../VL53L0X.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"VL53L0X.d" -MT"VL53L0X.o" -c -o "VL53L0X.o" "../VL53L0X.c"
+Finished building: ../VL53L0X.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:27:28 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:27:46 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:27:58 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:28:10 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:28:20 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:33:27 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+Finished building: ../StepMotor.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11908 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:36:07 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+../StepMotor.c: In function 'half_step_motor_left':
+../StepMotor.c:73: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:73: error: (Each undeclared identifier is reported only once
+../StepMotor.c:73: error: for each function it appears in.)
+../StepMotor.c:73: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:83: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:86: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+../StepMotor.c:89: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:92: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c: In function 'half_step_motor_right':
+../StepMotor.c:169: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:169: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:177: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:180: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c:183: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:186: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+make: *** [StepMotor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:36:44 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+../StepMotor.c: In function 'half_step_motor_left':
+../StepMotor.c:73: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:73: error: (Each undeclared identifier is reported only once
+../StepMotor.c:73: error: for each function it appears in.)
+../StepMotor.c:73: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:83: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:86: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+../StepMotor.c:89: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:92: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c: In function 'half_step_motor_right':
+../StepMotor.c:169: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:169: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:177: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:180: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c:183: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:186: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+make: *** [StepMotor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:36:46 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+../StepMotor.c: In function 'half_step_motor_left':
+../StepMotor.c:73: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:73: error: (Each undeclared identifier is reported only once
+../StepMotor.c:73: error: for each function it appears in.)
+../StepMotor.c:73: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:83: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:86: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+../StepMotor.c:89: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:92: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c: In function 'half_step_motor_right':
+../StepMotor.c:169: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:169: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:177: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:180: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c:183: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:186: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+make: *** [StepMotor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:36:52 **** Clean-only build of configuration Release for project polacz ****
+make clean 
+rm -rf  polacz.hex  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o  polacz.eep  sizedummy  polacz.lss  ./util/2cmaster.d ./util/millis.d  ./HD44780.d ./StepMotor.d ./VL53L0X.d ./main.d  polacz.elf
+ 
+12:36:52 **** Build of configuration Release for project polacz ****
+make all 
+Building file: ../util/2cmaster.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"util/2cmaster.d" -MT"util/2cmaster.o" -c -o "util/2cmaster.o" "../util/2cmaster.c"
+Finished building: ../util/2cmaster.c
+ 
+Building file: ../util/millis.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"util/millis.d" -MT"util/millis.o" -c -o "util/millis.o" "../util/millis.c"
+Finished building: ../util/millis.c
+ 
+Building file: ../HD44780.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"HD44780.d" -MT"HD44780.o" -c -o "HD44780.o" "../HD44780.c"
+Finished building: ../HD44780.c
+ 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+../StepMotor.c: In function 'half_step_motor_left':
+../StepMotor.c:73: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:73: error: (Each undeclared identifier is reported only once
+../StepMotor.c:73: error: for each function it appears in.)
+../StepMotor.c:73: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:74: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:75: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:76: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:83: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:86: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+../StepMotor.c:89: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:92: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c: In function 'half_step_motor_right':
+../StepMotor.c:169: error: 'SM_1_IN1_DIR' undeclared (first use in this function)
+../StepMotor.c:169: error: 'SM_1_IN1' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2_DIR' undeclared (first use in this function)
+../StepMotor.c:170: error: 'SM_1_IN2' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3_DIR' undeclared (first use in this function)
+../StepMotor.c:171: error: 'SM_1_IN3' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4_DIR' undeclared (first use in this function)
+../StepMotor.c:172: error: 'SM_1_IN4' undeclared (first use in this function)
+../StepMotor.c:177: error: 'SM_1_IN1_PORT' undeclared (first use in this function)
+../StepMotor.c:180: error: 'SM_1_IN3_PORT' undeclared (first use in this function)
+../StepMotor.c:183: error: 'SM_1_IN4_PORT' undeclared (first use in this function)
+../StepMotor.c:186: error: 'SM_1_IN2_PORT' undeclared (first use in this function)
+make: *** [StepMotor.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+12:38:33 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../StepMotor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"StepMotor.d" -MT"StepMotor.o" -c -o "StepMotor.o" "../StepMotor.c"
+Finished building: ../StepMotor.c
+ 
+Building file: ../VL53L0X.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"VL53L0X.d" -MT"VL53L0X.o" -c -o "VL53L0X.o" "../VL53L0X.c"
+Finished building: ../VL53L0X.c
+ 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11864 bytes (36.2% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:39:11 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11878 bytes (36.2% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:40:11 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11878 bytes (36.2% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+12:40:58 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   11886 bytes (36.3% Full)
+(.text + .data + .bootloader)
+
+Data:        298 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:47:23 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:155: error: expected declaration or statement at end of input
+../main.c:96: warning: unused variable 'liczba'
+../main.c:92: warning: unused variable 'text'
+../main.c:61: warning: unused variable 'a'
+../main.c:57: warning: unused variable 'xTraStats'
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:47:42 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:155: error: expected declaration or statement at end of input
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:49:16 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:55: error: expected identifier or '(' before '}' token
+../main.c: In function 'main':
+../main.c:158: error: expected declaration or statement at end of input
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:49:31 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   10578 bytes (32.3% Full)
+(.text + .data + .bootloader)
+
+Data:        300 bytes (14.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:57:10 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:60: error: array size missing in 'tab'
+../main.c:111: warning: format '%d' expects type 'int', but argument 3 has type 'uint32_t'
+make: *** [main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+17:57:29 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function 'main':
+../main.c:111: warning: format '%d' expects type 'int', but argument 3 has type 'uint32_t'
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12116 bytes (37.0% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:57:53 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=8000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: polacz.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,polacz.map -mmcu=atmega32 -o "polacz.elf"  ./util/2cmaster.o ./util/millis.o  ./HD44780.o ./StepMotor.o ./VL53L0X.o ./main.o   
+Finished building target: polacz.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S polacz.elf  >"polacz.lss"
+Finished building: polacz.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex polacz.elf  "polacz.hex"
+Finished building: polacz.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex polacz.elf  "polacz.eep"
+Finished building: polacz.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12094 bytes (36.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+17:58:07 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12094 bytes (36.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

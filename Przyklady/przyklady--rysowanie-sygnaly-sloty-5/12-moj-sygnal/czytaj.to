@@ -1,0 +1,2 @@
+Przykład demonstruje definicję własnego sygnału i połączenie go
+ze slotem "close()" obiektu klasy QMainWindow.

@@ -1,0 +1,13 @@
+ Pakiet zawiera dwa przykłady:
+
+  - przyklad nadawanie tekstu,
+     źródła: inc/transparam.hh src/transparam.cpp src/odbieranie.cpp
+
+  - przyklad odbioru tekstu,
+     źródła: inc/transparam.hh src/transparam.cpp src/nadawanie.cpp
+
+ Program nadawanie otwiera połącznie na porcie: /dev/ttyUSB0,
+ Program nadawanie otwiera połącznie na porcie: /dev/ttyUSB1,
+
+ Jeśli zrealizowano połącznie na danym komputerze dwóch kolejnych portów USB,
+ to program nadający komunikuje się z programem odbierającym.

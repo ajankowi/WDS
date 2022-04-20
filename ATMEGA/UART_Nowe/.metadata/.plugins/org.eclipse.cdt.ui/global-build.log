@@ -1,0 +1,17 @@
+16:00:41 **** Incremental Build of configuration Release for project USART_COM ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 USART_COM.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:     162 bytes (1.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

@@ -1,0 +1,20 @@
+17:58:07 **** Incremental Build of configuration Release for project polacz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 polacz.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:   12094 bytes (36.9% Full)
+(.text + .data + .bootloader)
+
+Data:        314 bytes (15.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+17:58:07 Build Finished. 0 errors, 0 warnings. (took 209ms)
+

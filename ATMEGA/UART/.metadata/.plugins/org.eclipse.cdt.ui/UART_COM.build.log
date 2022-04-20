@@ -1,0 +1,35 @@
+15:40:19 **** Incremental Build of configuration Release for project UART_COM ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: libUART_COM.a
+Invoking: AVR Archiver
+avr-ar -r  "libUART_COM.a"  ./main.o  
+c:\WinAVR-20100110\bin\avr-ar.exe: creating libUART_COM.a
+Finished building target: libUART_COM.a
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S libUART_COM.a  >"libUART_COM.lss"
+Finished building: libUART_COM.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 libUART_COM.a
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:       0 bytes (0.0% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:40:20 Build Finished. 0 errors, 0 warnings. (took 460ms)
+
