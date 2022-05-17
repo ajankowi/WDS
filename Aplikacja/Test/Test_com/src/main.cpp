@@ -13,12 +13,13 @@
 #include <cstdio>
 #include <cstring>
 #include <errno.h>
+#include <cstring>
 #include "transparam.hh"
 #include "nadawanie.hh"
 #include "odbieranie.hh"
 
 #define ROZMIAR_LINII   100
-#define SIG_1 99
+#define SIG_1 4
 
 
 using namespace std;
@@ -28,7 +29,7 @@ int main(){
 
 
 	int a = 0;
-	//int b = 1;
+	int b = 0;
 	int sig1 = 0;
 
 
@@ -37,16 +38,18 @@ int main(){
 	while(1){
 
 		while(!a){
-			a = Nadaj(SIG_1);
+			a = Nadaj(b);
+			//b++;
 		}
 		a = 0;
+		usleep(100000);
 
 		Odbierz(sig1);
 
-		cout << "Sig1:  " << sig1 << endl;
+		cout << "Sig:  " << sig1 << endl;
 
-		//usleep(1000000);
-		usleep(1000);
+		usleep(1000000);
+		//usleep(2000000);
 	}
 
 	return 0;

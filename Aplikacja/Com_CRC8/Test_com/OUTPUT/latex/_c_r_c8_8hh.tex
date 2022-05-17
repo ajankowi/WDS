@@ -1,0 +1,165 @@
+\hypertarget{_c_r_c8_8hh}{}\doxysection{Dokumentacja pliku inc/\+CRC8.hh}
+\label{_c_r_c8_8hh}\index{inc/CRC8.hh@{inc/CRC8.hh}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_c_r_c8_8hh_ae7295ab9ac7d1cd2196d4e4a62c84e77}{POLYNOMIAL\+\_\+9}}~0x161
+\end{DoxyCompactItemize}
+\doxysubsection*{Definicje typów}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{_c_r_c8_8hh_a3b6cdad88337909c7008f4c45fa391f8}{CRC8\+\_\+\+Single\+Byte}} (unsigned int Data2)
+\begin{DoxyCompactList}\small\item\em Funkcja konwertuje pojedynczy bit. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} \mbox{\hyperlink{_c_r_c8_8hh_adb82eecef5aac384be3bf818f89574ff}{CRC8\+\_\+\+Data\+Array}} (const \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$p\+Data\+Frame, \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} Len)
+\begin{DoxyCompactList}\small\item\em Funkcja oblicza odpowiednia wartosc sumy kontrolnej w zaleznosci od wiadomosci. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} \mbox{\hyperlink{_c_r_c8_8hh_aca71078384d40144f0e40dd289f81848}{CRC8\+\_\+\+Data\+Array}} (const char $\ast$p\+Data\+Frame, \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} Len)
+\begin{DoxyCompactList}\small\item\em Funkcja konwertuje rozmiar const char$\ast$ na const bite$\ast$. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_c_r_c8_8hh_ac31eb82d2e9168e5beced051f7f9e931}{Parse\+Data\+Frame}} (const char $\ast$p\+Data\+Frame, int \&AccX)
+\begin{DoxyCompactList}\small\item\em Funkcja sprawdza popranosc danej ramki danych w zaleznosci od przeslanej wiadomosci. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_c_r_c8_8hh_a32b823e0b46ad7a42bdfc587ddafdfda}{Parse\+Data\+Frame}} (const std\+::string \&r\+Data\+Frame, int \&AccX)
+\begin{DoxyCompactList}\small\item\em Funkcja konwertuje rozmiar string na const char$\ast$ oraz uruchamia funckje \mbox{\hyperlink{_c_r_c8_8hh_ac31eb82d2e9168e5beced051f7f9e931}{Parse\+Data\+Frame( const char $\ast$p\+Data\+Frame, int \&\+Acc\+X)}} \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{_c_r_c8_8hh_a59937f7079888b0596b5c4d364b865d2}{Create\+Data\+Frame}} (int AccX)
+\begin{DoxyCompactList}\small\item\em Funkcja tworzy odpowiednia ramke danych zawierajaca znak \textquotesingle{}X\textquotesingle{} na poczatku, przesylana wiadomosc oraz sume kontrolna. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_c_r_c8_8hh_ad368e716ffe84b5983950bf1925ac81a}{min}} ()
+\begin{DoxyCompactList}\small\item\em Funkcja laczy i sprawdza poprawnosc dzialania tworzenia i odbierania wiadomosci z suma kontrolna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\Hypertarget{_c_r_c8_8hh_ae7295ab9ac7d1cd2196d4e4a62c84e77}\label{_c_r_c8_8hh_ae7295ab9ac7d1cd2196d4e4a62c84e77}} 
+\index{CRC8.hh@{CRC8.hh}!POLYNOMIAL\_9@{POLYNOMIAL\_9}}
+\index{POLYNOMIAL\_9@{POLYNOMIAL\_9}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{POLYNOMIAL\_9}{POLYNOMIAL\_9}}
+{\footnotesize\ttfamily \#define POLYNOMIAL\+\_\+9~0x161}
+
+
+
+\doxysubsection{Dokumentacja definicji typów}
+\mbox{\Hypertarget{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}\label{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}} 
+\index{CRC8.hh@{CRC8.hh}!byte@{byte}}
+\index{byte@{byte}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{byte}{byte}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{_c_r_c8_8hh_adb82eecef5aac384be3bf818f89574ff}\label{_c_r_c8_8hh_adb82eecef5aac384be3bf818f89574ff}} 
+\index{CRC8.hh@{CRC8.hh}!CRC8\_DataArray@{CRC8\_DataArray}}
+\index{CRC8\_DataArray@{CRC8\_DataArray}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{CRC8\_DataArray()}{CRC8\_DataArray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} CRC8\+\_\+\+Data\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} $\ast$}]{p\+Data\+Frame,  }\item[{\mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}}]{Len }\end{DoxyParamCaption})}
+
+
+
+Funkcja oblicza odpowiednia wartosc sumy kontrolnej w zaleznosci od wiadomosci. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Zwraca} & odpowiednia wartosc sumy kontrolnej \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_c_r_c8_8hh_aca71078384d40144f0e40dd289f81848}\label{_c_r_c8_8hh_aca71078384d40144f0e40dd289f81848}} 
+\index{CRC8.hh@{CRC8.hh}!CRC8\_DataArray@{CRC8\_DataArray}}
+\index{CRC8\_DataArray@{CRC8\_DataArray}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{CRC8\_DataArray()}{CRC8\_DataArray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}} CRC8\+\_\+\+Data\+Array (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Data\+Frame,  }\item[{\mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}}}]{Len }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja konwertuje rozmiar const char$\ast$ na const bite$\ast$. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Zwraca} & odpowiednia wartosc sumy kontrolnej \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_c_r_c8_8hh_a3b6cdad88337909c7008f4c45fa391f8}\label{_c_r_c8_8hh_a3b6cdad88337909c7008f4c45fa391f8}} 
+\index{CRC8.hh@{CRC8.hh}!CRC8\_SingleByte@{CRC8\_SingleByte}}
+\index{CRC8\_SingleByte@{CRC8\_SingleByte}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{CRC8\_SingleByte()}{CRC8\_SingleByte()}}
+{\footnotesize\ttfamily unsigned int CRC8\+\_\+\+Single\+Byte (\begin{DoxyParamCaption}\item[{unsigned int}]{Data2 }\end{DoxyParamCaption})}
+
+
+
+Funkcja konwertuje pojedynczy bit. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Odpowiedno} & przkonwertowany bit \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_c_r_c8_8hh_a59937f7079888b0596b5c4d364b865d2}\label{_c_r_c8_8hh_a59937f7079888b0596b5c4d364b865d2}} 
+\index{CRC8.hh@{CRC8.hh}!CreateDataFrame@{CreateDataFrame}}
+\index{CreateDataFrame@{CreateDataFrame}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{CreateDataFrame()}{CreateDataFrame()}}
+{\footnotesize\ttfamily std\+::string Create\+Data\+Frame (\begin{DoxyParamCaption}\item[{int}]{AccX }\end{DoxyParamCaption})}
+
+
+
+Funkcja tworzy odpowiednia ramke danych zawierajaca znak \textquotesingle{}X\textquotesingle{} na poczatku, przesylana wiadomosc oraz sume kontrolna. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Zwracany} & jest string zawierajacy ramke danych \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_c_r_c8_8hh_ad368e716ffe84b5983950bf1925ac81a}\label{_c_r_c8_8hh_ad368e716ffe84b5983950bf1925ac81a}} 
+\index{CRC8.hh@{CRC8.hh}!min@{min}}
+\index{min@{min}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{min()}{min()}}
+{\footnotesize\ttfamily int min (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Funkcja laczy i sprawdza poprawnosc dzialania tworzenia i odbierania wiadomosci z suma kontrolna. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em 0} & poprawnie udalo sie wykonac funkcje \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_c_r_c8_8hh_ac31eb82d2e9168e5beced051f7f9e931}\label{_c_r_c8_8hh_ac31eb82d2e9168e5beced051f7f9e931}} 
+\index{CRC8.hh@{CRC8.hh}!ParseDataFrame@{ParseDataFrame}}
+\index{ParseDataFrame@{ParseDataFrame}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{ParseDataFrame()}{ParseDataFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Parse\+Data\+Frame (\begin{DoxyParamCaption}\item[{const char $\ast$}]{p\+Data\+Frame,  }\item[{int \&}]{AccX }\end{DoxyParamCaption})}
+
+
+
+Funkcja sprawdza popranosc danej ramki danych w zaleznosci od przeslanej wiadomosci. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em TRUE} & Odebrana ramka danych jest poprawna \\
+\hline
+{\em FALSE} & Blad danych wejsciowych lub blad w ramce danych \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{_c_r_c8_8hh_a32b823e0b46ad7a42bdfc587ddafdfda}\label{_c_r_c8_8hh_a32b823e0b46ad7a42bdfc587ddafdfda}} 
+\index{CRC8.hh@{CRC8.hh}!ParseDataFrame@{ParseDataFrame}}
+\index{ParseDataFrame@{ParseDataFrame}!CRC8.hh@{CRC8.hh}}
+\doxysubsubsection{\texorpdfstring{ParseDataFrame()}{ParseDataFrame()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Parse\+Data\+Frame (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{r\+Data\+Frame,  }\item[{int \&}]{AccX }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Funkcja konwertuje rozmiar string na const char$\ast$ oraz uruchamia funckje \mbox{\hyperlink{_c_r_c8_8hh_ac31eb82d2e9168e5beced051f7f9e931}{Parse\+Data\+Frame( const char $\ast$p\+Data\+Frame, int \&\+Acc\+X)}} 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em TRUE} & Odebrana ramka danych jest poprawna \\
+\hline
+{\em FALSE} & Blad danych wejsciowych lub blad w ramce danych \\
+\hline
+\end{DoxyRetVals}

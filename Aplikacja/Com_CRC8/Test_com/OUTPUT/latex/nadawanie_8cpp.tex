@@ -1,0 +1,72 @@
+\hypertarget{nadawanie_8cpp}{}\doxysection{Dokumentacja pliku src/nadawanie.cpp}
+\label{nadawanie_8cpp}\index{src/nadawanie.cpp@{src/nadawanie.cpp}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include \char`\"{}transparam.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}nadawanie.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CRC8.\+hh\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{nadawanie_8cpp_ac4f92db10fea9b5bd0337dcfa87f1850}{ROZMIAR\+\_\+\+LINII}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{nadawanie_8cpp_a82cbf0c975199c78f129fca9c64bb261}{RS232\+\_\+\+Nadaj}} (int Desk\+Portu, const char $\ast$w\+Napis)
+\begin{DoxyCompactList}\small\item\em Funkcja wysyla wiadomosc znak po znaku oraz sprawdza czy liczba znakow wyslanych jest taka sama jak liczba znakow do wyslania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{nadawanie_8cpp_a4e65b62a19cff1d44e76c2b708c6e3b2}{Nadaj}} (const int sig)
+\begin{DoxyCompactList}\small\item\em Funkcja laczy sie z odpowiednim portem komunikacyjnym, nastepnie tworzona jest odpowiednia ramka danych zawierajaca sume kontrolna oraz zostaje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\Hypertarget{nadawanie_8cpp_ac4f92db10fea9b5bd0337dcfa87f1850}\label{nadawanie_8cpp_ac4f92db10fea9b5bd0337dcfa87f1850}} 
+\index{nadawanie.cpp@{nadawanie.cpp}!ROZMIAR\_LINII@{ROZMIAR\_LINII}}
+\index{ROZMIAR\_LINII@{ROZMIAR\_LINII}!nadawanie.cpp@{nadawanie.cpp}}
+\doxysubsubsection{\texorpdfstring{ROZMIAR\_LINII}{ROZMIAR\_LINII}}
+{\footnotesize\ttfamily \#define ROZMIAR\+\_\+\+LINII~100}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{nadawanie_8cpp_a4e65b62a19cff1d44e76c2b708c6e3b2}\label{nadawanie_8cpp_a4e65b62a19cff1d44e76c2b708c6e3b2}} 
+\index{nadawanie.cpp@{nadawanie.cpp}!Nadaj@{Nadaj}}
+\index{Nadaj@{Nadaj}!nadawanie.cpp@{nadawanie.cpp}}
+\doxysubsubsection{\texorpdfstring{Nadaj()}{Nadaj()}}
+{\footnotesize\ttfamily int Nadaj (\begin{DoxyParamCaption}\item[{const int}]{sig }\end{DoxyParamCaption})}
+
+
+
+Funkcja laczy sie z odpowiednim portem komunikacyjnym, nastepnie tworzona jest odpowiednia ramka danych zawierajaca sume kontrolna oraz zostaje. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em 1} & Wiadomosc zostala poprawnie wyslana \\
+\hline
+{\em 0} & Nie udalo sie poprawnie wyslac wiadomosci \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nadawanie_8cpp_a82cbf0c975199c78f129fca9c64bb261}\label{nadawanie_8cpp_a82cbf0c975199c78f129fca9c64bb261}} 
+\index{nadawanie.cpp@{nadawanie.cpp}!RS232\_Nadaj@{RS232\_Nadaj}}
+\index{RS232\_Nadaj@{RS232\_Nadaj}!nadawanie.cpp@{nadawanie.cpp}}
+\doxysubsubsection{\texorpdfstring{RS232\_Nadaj()}{RS232\_Nadaj()}}
+{\footnotesize\ttfamily bool RS232\+\_\+\+Nadaj (\begin{DoxyParamCaption}\item[{int}]{Desk\+Portu,  }\item[{const char $\ast$}]{w\+Napis }\end{DoxyParamCaption})}
+
+
+
+Funkcja wysyla wiadomosc znak po znaku oraz sprawdza czy liczba znakow wyslanych jest taka sama jak liczba znakow do wyslania. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em TRUE} & Udalo sie wyslac wszystkie znaki poprawnie \\
+\hline
+{\em FALSE} & Nie udalo sie wyslac wszystkich znakow \\
+\hline
+\end{DoxyRetVals}

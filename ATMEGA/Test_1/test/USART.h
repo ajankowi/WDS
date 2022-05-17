@@ -6,7 +6,7 @@
 #define BRC ((F_CPU/16/BUD)-1)
 
 
- char *buff;
+char *buff;
 
 void USART_Init();
 void UART_TxChar(char ch);

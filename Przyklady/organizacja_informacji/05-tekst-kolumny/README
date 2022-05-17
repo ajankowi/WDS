@@ -1,0 +1,7 @@
+W stosunku do przykładu 04 obiekty QLabel, w których były
+wyświetlane wartości, zostały zmienione na QLineEdit.
+Ze względu na to, że obiekty tej klasy zostały wykorzystane
+tylko do wyświetlania, ich własności zostały ustawione
+na tylko do odczytu (read only) oraz usunięto możliwość
+przechwytywania focus (focus policy: NoFocus).
+

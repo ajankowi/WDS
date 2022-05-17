@@ -4,6 +4,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 O_SRCS += \
+../obj/CRC8.o \
 ../obj/main.o \
 ../obj/nadawanie.o \
 ../obj/odbieranie.o \

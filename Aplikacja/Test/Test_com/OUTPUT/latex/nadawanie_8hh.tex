@@ -1,0 +1,54 @@
+\hypertarget{nadawanie_8hh}{}\doxysection{Dokumentacja pliku inc/nadawanie.hh}
+\label{nadawanie_8hh}\index{inc/nadawanie.hh@{inc/nadawanie.hh}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{nadawanie_8hh_a82cbf0c975199c78f129fca9c64bb261}{RS232\+\_\+\+Nadaj}} (int Desk\+Portu, const char $\ast$w\+Napis)
+\begin{DoxyCompactList}\small\item\em Funkcja wysyla wiadomosc znak po znaku oraz sprawdza czy liczba znakow wyslanych jest taka sama jak liczba znakow do wyslania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{nadawanie_8hh_a4e65b62a19cff1d44e76c2b708c6e3b2}{Nadaj}} (const int sig)
+\begin{DoxyCompactList}\small\item\em Funkcja laczy sie z odpowiednim portem komunikacyjnym, nastepnie tworzona jest odpowiednia ramka danych zawierajaca sume kontrolna oraz zostaje. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{nadawanie_8hh_a4e65b62a19cff1d44e76c2b708c6e3b2}\label{nadawanie_8hh_a4e65b62a19cff1d44e76c2b708c6e3b2}} 
+\index{nadawanie.hh@{nadawanie.hh}!Nadaj@{Nadaj}}
+\index{Nadaj@{Nadaj}!nadawanie.hh@{nadawanie.hh}}
+\doxysubsubsection{\texorpdfstring{Nadaj()}{Nadaj()}}
+{\footnotesize\ttfamily int Nadaj (\begin{DoxyParamCaption}\item[{const int}]{sig }\end{DoxyParamCaption})}
+
+
+
+Funkcja laczy sie z odpowiednim portem komunikacyjnym, nastepnie tworzona jest odpowiednia ramka danych zawierajaca sume kontrolna oraz zostaje. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em 1} & Wiadomosc zostala poprawnie wyslana \\
+\hline
+{\em 0} & Nie udalo sie poprawnie wyslac wiadomosci \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{nadawanie_8hh_a82cbf0c975199c78f129fca9c64bb261}\label{nadawanie_8hh_a82cbf0c975199c78f129fca9c64bb261}} 
+\index{nadawanie.hh@{nadawanie.hh}!RS232\_Nadaj@{RS232\_Nadaj}}
+\index{RS232\_Nadaj@{RS232\_Nadaj}!nadawanie.hh@{nadawanie.hh}}
+\doxysubsubsection{\texorpdfstring{RS232\_Nadaj()}{RS232\_Nadaj()}}
+{\footnotesize\ttfamily bool RS232\+\_\+\+Nadaj (\begin{DoxyParamCaption}\item[{int}]{Desk\+Portu,  }\item[{const char $\ast$}]{w\+Napis }\end{DoxyParamCaption})}
+
+
+
+Funkcja wysyla wiadomosc znak po znaku oraz sprawdza czy liczba znakow wyslanych jest taka sama jak liczba znakow do wyslania. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em TRUE} & Udalo sie wyslac wszystkie znaki poprawnie \\
+\hline
+{\em FALSE} & Nie udalo sie wyslac wszystkich znakow \\
+\hline
+\end{DoxyRetVals}

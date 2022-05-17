@@ -1,0 +1,14 @@
+20:54:58 **** Incremental Build of configuration Release for project Test_com ****
+make all 
+Building file: ../src/main.cpp
+Invoking: Cross G++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:16:10: fatal error: transparam.hh: No such file or directory
+   16 | #include "transparam.hh"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+20:54:59 Build Failed. 2 errors, 0 warnings. (took 874ms)
+

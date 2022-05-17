@@ -4,18 +4,21 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
+../src/CRC8.cpp \
 ../src/main.cpp \
 ../src/nadawanie.cpp \
 ../src/odbieranie.cpp \
 ../src/transparam.cpp 
 
 OBJS += \
+./src/CRC8.o \
 ./src/main.o \
 ./src/nadawanie.o \
 ./src/odbieranie.o \
 ./src/transparam.o 
 
 CPP_DEPS += \
+./src/CRC8.d \
 ./src/main.d \
 ./src/nadawanie.d \
 ./src/odbieranie.d \

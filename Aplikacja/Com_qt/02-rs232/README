@@ -1,0 +1,5 @@
+Przykład realizacji komunikacji z wykorzystaniem osobnego
+wątku stworzonego na bazie klasy QThread.
+
+Uruchomienie przykładu wymaga połączenie dwóch portów USB
+poprzez dwie przejściówki USB<->RS232.

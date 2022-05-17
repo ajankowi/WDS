@@ -1,0 +1,111 @@
+\hypertarget{odbieranie_8cpp}{}\doxysection{Dokumentacja pliku src/odbieranie.cpp}
+\label{odbieranie_8cpp}\index{src/odbieranie.cpp@{src/odbieranie.cpp}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}odbieranie.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}transparam.\+hh\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CRC8.\+hh\char`\"{}}\newline
+\doxysubsection*{Definicje}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{odbieranie_8cpp_ac4f92db10fea9b5bd0337dcfa87f1850}{ROZMIAR\+\_\+\+LINII}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{odbieranie_8cpp_acb92bf56d0e1ea8c61397989de2972c5}{Czas\+\_\+\+Jest\+Pozniej\+Niz}} (const struct timespec \&CzasX)
+\begin{DoxyCompactList}\small\item\em Funkcja sprawdza czy czy podany czas jest ponizej aktualnego. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{odbieranie_8cpp_ab508e708cea79698a8d0ec837fe044d4}{RS232\+\_\+\+Odbierz}} (int Desk\+Portu, string \&Bufor, unsigned int Ilosc\+Znakow)
+\begin{DoxyCompactList}\small\item\em Funkcja odczytuje pojedynczy znak wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{odbieranie_8cpp_a6f2156dbc70873befb3100b88721eed3}{RS232\+\_\+\+Odbierz}} (int Desk\+Portu, char \&Bufor\+Znaku)
+\begin{DoxyCompactList}\small\item\em Funkcja odczytuje liczbe znakow w wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{odbieranie_8cpp_a8ff9506448aa7d619d7db4c52ff489ea}{Odbierz}} (int \&sig)
+\begin{DoxyCompactList}\small\item\em Funkcja otwiera odpowiedni port komunikacyjny, wczytuje otrzymana wiadomosc oraz sprawdza sume kontrolna przeslanej wiadomosci. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja definicji}
+\mbox{\Hypertarget{odbieranie_8cpp_ac4f92db10fea9b5bd0337dcfa87f1850}\label{odbieranie_8cpp_ac4f92db10fea9b5bd0337dcfa87f1850}} 
+\index{odbieranie.cpp@{odbieranie.cpp}!ROZMIAR\_LINII@{ROZMIAR\_LINII}}
+\index{ROZMIAR\_LINII@{ROZMIAR\_LINII}!odbieranie.cpp@{odbieranie.cpp}}
+\doxysubsubsection{\texorpdfstring{ROZMIAR\_LINII}{ROZMIAR\_LINII}}
+{\footnotesize\ttfamily \#define ROZMIAR\+\_\+\+LINII~100}
+
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{odbieranie_8cpp_acb92bf56d0e1ea8c61397989de2972c5}\label{odbieranie_8cpp_acb92bf56d0e1ea8c61397989de2972c5}} 
+\index{odbieranie.cpp@{odbieranie.cpp}!Czas\_JestPozniejNiz@{Czas\_JestPozniejNiz}}
+\index{Czas\_JestPozniejNiz@{Czas\_JestPozniejNiz}!odbieranie.cpp@{odbieranie.cpp}}
+\doxysubsubsection{\texorpdfstring{Czas\_JestPozniejNiz()}{Czas\_JestPozniejNiz()}}
+{\footnotesize\ttfamily bool Czas\+\_\+\+Jest\+Pozniej\+Niz (\begin{DoxyParamCaption}\item[{const struct timespec \&}]{CzasX }\end{DoxyParamCaption})}
+
+
+
+Funkcja sprawdza czy czy podany czas jest ponizej aktualnego. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em TRUE} & jezeli podany czas jest ponizej aktualnego \\
+\hline
+{\em FALSE} & jezeli czas jest powyzej badz jest rowny \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{odbieranie_8cpp_a8ff9506448aa7d619d7db4c52ff489ea}\label{odbieranie_8cpp_a8ff9506448aa7d619d7db4c52ff489ea}} 
+\index{odbieranie.cpp@{odbieranie.cpp}!Odbierz@{Odbierz}}
+\index{Odbierz@{Odbierz}!odbieranie.cpp@{odbieranie.cpp}}
+\doxysubsubsection{\texorpdfstring{Odbierz()}{Odbierz()}}
+{\footnotesize\ttfamily int Odbierz (\begin{DoxyParamCaption}\item[{int \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Funkcja otwiera odpowiedni port komunikacyjny, wczytuje otrzymana wiadomosc oraz sprawdza sume kontrolna przeslanej wiadomosci. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em 0} & -\/ Poprawnie odebrano wiadomosc \\
+\hline
+{\em -\/1} & -\/ Blad podczas odbierania wiadomosci \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{odbieranie_8cpp_a6f2156dbc70873befb3100b88721eed3}\label{odbieranie_8cpp_a6f2156dbc70873befb3100b88721eed3}} 
+\index{odbieranie.cpp@{odbieranie.cpp}!RS232\_Odbierz@{RS232\_Odbierz}}
+\index{RS232\_Odbierz@{RS232\_Odbierz}!odbieranie.cpp@{odbieranie.cpp}}
+\doxysubsubsection{\texorpdfstring{RS232\_Odbierz()}{RS232\_Odbierz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily int RS232\+\_\+\+Odbierz (\begin{DoxyParamCaption}\item[{int}]{Desk\+Portu,  }\item[{char \&}]{Bufor\+Znaku }\end{DoxyParamCaption})}
+
+
+
+Funkcja odczytuje liczbe znakow w wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em TRUE} & Liczba odebranych znakow wiadomosci jest wieksza od 1 \\
+\hline
+{\em FALSE} & Nie udalo sie odebrac wiadomosci, liczba znakow wynosi 0 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{odbieranie_8cpp_ab508e708cea79698a8d0ec837fe044d4}\label{odbieranie_8cpp_ab508e708cea79698a8d0ec837fe044d4}} 
+\index{odbieranie.cpp@{odbieranie.cpp}!RS232\_Odbierz@{RS232\_Odbierz}}
+\index{RS232\_Odbierz@{RS232\_Odbierz}!odbieranie.cpp@{odbieranie.cpp}}
+\doxysubsubsection{\texorpdfstring{RS232\_Odbierz()}{RS232\_Odbierz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool RS232\+\_\+\+Odbierz (\begin{DoxyParamCaption}\item[{int}]{Desk\+Portu,  }\item[{string \&}]{Bufor,  }\item[{unsigned int}]{Ilosc\+Znakow }\end{DoxyParamCaption})}
+
+
+
+Funkcja odczytuje pojedynczy znak wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania. 
+
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em TRUE} & Poprawnie wczytano znak \\
+\hline
+\end{DoxyRetVals}

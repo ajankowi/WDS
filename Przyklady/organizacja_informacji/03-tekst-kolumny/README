@@ -1,0 +1,6 @@
+W stosunku do przykładu 02 zostało poprawione wyświetlanie jednostek.
+Teraz zarówno opisy wyświetlanych wielkości, ich wartości oraz
+jednostki, wszystkie one znajdują się w osobnych kolumnach.
+Do zarządzania geometrią tych elementów wykorzystano QGridLayout.
+Chcąc otrzymać odpowiedni efekt, zmieniono sposób wyrównywania
+zawartości etykiet wyświetlających wartości. Zadano wyrównywanie do prawej.

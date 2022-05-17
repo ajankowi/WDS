@@ -1,0 +1,37 @@
+Przykład testowania komunikacji z wykorzystaniem wirtualnych
+terminali.
+
+Odbiór realizowany jest w osobnym wątku. Funkcja wątku zdefiniowana
+jest w module: WatekOdbioru.cpp, funkcja: void WatekOdbioru( Komunikacja *pLaczeKom )
+Wątek tworzony jest w oparciu o rozwiązania wprowadzone w standardzie C++11.
+Aplikacja w części graficznej Qt czyta okresowo stan wspólnego bufora
+i wyświetla odebrane dane. Dostęp do bufora jest kontrolowany poprzez
+odpowiedni obiekt klasy std::mutex (patrz definicja klasy BuforDanych).
+Okresowe czytanie przez aplikację Qt jest zrealizowane z wykorzystaniem
+obiektu klasy QTimer, który generuje okresowa zdarzenie. Obsługa tego
+zdarzenia wykorzystana jest do czytania bufora i aktualizacji wyświetlanej
+zawartości.
+
+
+
+Chcąc uruchomić przykład należy:
+
+1. Wywołać polecenie make. To spowoduje utworzenie
+   programów: odbiornik-qt, nadawanie
+
+2. Uruchomić skrypt ./utworz_kanal_komunikacyjny.sh
+   Efekt dzialania np.
+
+bk@noxon:03-rs232-vir$ ./utworz_kanal_komunikacyjny.sh 
+2018/06/03 18:41:12 socat[20754] N PTY is /dev/pts/2
+2018/06/03 18:41:12 socat[20754] N PTY is /dev/pts/20
+2018/06/03 18:41:12 socat[20754] N starting data transfer loop with FDs [5,5] and [7,7]
+
+3. Należy w dwóch osobnych okienkach przejść do kartoteki,
+   w której znajdują utworzone programy i je uruchomić podając
+   jak parametry wywołania utworzone pseudoterminale.
+   Dla przykładu powyżej będzie to:
+
+   ./odbiornik-qt /dev/pts/2
+   ./nadawanie    /dev/pts/20
+   

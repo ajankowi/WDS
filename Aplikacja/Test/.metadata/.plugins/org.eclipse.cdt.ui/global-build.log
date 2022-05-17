@@ -53,3 +53,25 @@ g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o 
 compilation terminated.
 make: *** [src/main.o] Error 1
 "make all" terminated with exit code 2. Build might be incomplete.
+20:54:58 **** Incremental Build of configuration Release for project Test_com ****
+make all 
+Building file: ../src/main.cpp
+Invoking: Cross G++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp:16:10: fatal error: transparam.hh: No such file or directory
+   16 | #include "transparam.hh"
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/main.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+13:38:46 **** Incremental Build of configuration Release for project Test_com ****
+make all 
+Building file: ../src/CRC8.cpp
+Invoking: Cross G++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/CRC8.d" -MT"src/CRC8.o" -o "src/CRC8.o" "../src/CRC8.cpp"
+../src/CRC8.cpp:7:10: fatal error: CRC8.hh: No such file or directory
+    7 | #include "CRC8.hh"
+      |          ^~~~~~~~~
+compilation terminated.
+make: *** [src/CRC8.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.

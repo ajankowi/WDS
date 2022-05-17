@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
-                            
+                                                
+    
+    
+    
+    
+    
     
     
     
     
     
     <instance id="de.innot.avreclipse.configuration.app.release.1006571746;de.innot.avreclipse.configuration.app.release.1006571746.;de.innot.avreclipse.tool.compiler.winavr.app.release.595516232;de.innot.avreclipse.compiler.winavr.input.259938171">
-                                                        
+                                                                                                
+        
+        
+        
+        
+        
         
         
         
@@ -138,14 +148,24 @@
             <definedSymbol symbol="F_CPU=8000000UL"/>
             <definedSymbol symbol="__AVR_ATmega32__=1"/>
         </collector>
-                                                    
+                                                                                            
+    
+    
+    
+    
+    
     
     
     
     
     
     </instance>
-                        
+                                            
+
+
+
+
+
 
 
 

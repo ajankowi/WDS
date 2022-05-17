@@ -1,0 +1,4 @@
+W stosunku do przykładu 05 informacje po prawej stronie
+zostały odpowiednio pogrupowane, tak aby uwypuklić ich
+wzajemne powiązanie. Do tego celu wykorzystane zostały
+obiekty klasy QFrame, które tworzą odpowiednie obramowanie.

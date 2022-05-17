@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Skaner 3D: Dokumentacja pliku src/odbieranie.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Skaner 3D<span id="projectnumber">&#160;V1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku odbieranie.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;cctype&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cstdio&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;errno.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="odbieranie_8hh_source.html">odbieranie.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="transparam_8hh_source.html">transparam.hh</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_c_r_c8_8hh_source.html">CRC8.hh</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:ac4f92db10fea9b5bd0337dcfa87f1850"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odbieranie_8cpp.html#ac4f92db10fea9b5bd0337dcfa87f1850">ROZMIAR_LINII</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:ac4f92db10fea9b5bd0337dcfa87f1850"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:acb92bf56d0e1ea8c61397989de2972c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odbieranie_8cpp.html#acb92bf56d0e1ea8c61397989de2972c5">Czas_JestPozniejNiz</a> (const struct timespec &amp;CzasX)</td></tr>
+<tr class="memdesc:acb92bf56d0e1ea8c61397989de2972c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja sprawdza czy czy podany czas jest ponizej aktualnego.  <a href="odbieranie_8cpp.html#acb92bf56d0e1ea8c61397989de2972c5">Więcej...</a><br /></td></tr>
+<tr class="separator:acb92bf56d0e1ea8c61397989de2972c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab508e708cea79698a8d0ec837fe044d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odbieranie_8cpp.html#ab508e708cea79698a8d0ec837fe044d4">RS232_Odbierz</a> (int DeskPortu, string &amp;Bufor, unsigned int IloscZnakow)</td></tr>
+<tr class="memdesc:ab508e708cea79698a8d0ec837fe044d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja odczytuje pojedynczy znak wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania.  <a href="odbieranie_8cpp.html#ab508e708cea79698a8d0ec837fe044d4">Więcej...</a><br /></td></tr>
+<tr class="separator:ab508e708cea79698a8d0ec837fe044d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f2156dbc70873befb3100b88721eed3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odbieranie_8cpp.html#a6f2156dbc70873befb3100b88721eed3">RS232_Odbierz</a> (int DeskPortu, char &amp;BuforZnaku)</td></tr>
+<tr class="memdesc:a6f2156dbc70873befb3100b88721eed3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja odczytuje liczbe znakow w wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania.  <a href="odbieranie_8cpp.html#a6f2156dbc70873befb3100b88721eed3">Więcej...</a><br /></td></tr>
+<tr class="separator:a6f2156dbc70873befb3100b88721eed3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ff9506448aa7d619d7db4c52ff489ea"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="odbieranie_8cpp.html#a8ff9506448aa7d619d7db4c52ff489ea">Odbierz</a> (int &amp;sig)</td></tr>
+<tr class="memdesc:a8ff9506448aa7d619d7db4c52ff489ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja otwiera odpowiedni port komunikacyjny, wczytuje otrzymana wiadomosc oraz sprawdza sume kontrolna przeslanej wiadomosci.  <a href="odbieranie_8cpp.html#a8ff9506448aa7d619d7db4c52ff489ea">Więcej...</a><br /></td></tr>
+<tr class="separator:a8ff9506448aa7d619d7db4c52ff489ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja definicji</h2>
+<a id="ac4f92db10fea9b5bd0337dcfa87f1850" name="ac4f92db10fea9b5bd0337dcfa87f1850"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac4f92db10fea9b5bd0337dcfa87f1850">&#9670;&nbsp;</a></span>ROZMIAR_LINII</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ROZMIAR_LINII&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="acb92bf56d0e1ea8c61397989de2972c5" name="acb92bf56d0e1ea8c61397989de2972c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb92bf56d0e1ea8c61397989de2972c5">&#9670;&nbsp;</a></span>Czas_JestPozniejNiz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Czas_JestPozniejNiz </td>
+          <td>(</td>
+          <td class="paramtype">const struct timespec &amp;&#160;</td>
+          <td class="paramname"><em>CzasX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja sprawdza czy czy podany czas jest ponizej aktualnego. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>jezeli podany czas jest ponizej aktualnego </td></tr>
+    <tr><td class="paramname">FALSE</td><td>jezeli czas jest powyzej badz jest rowny </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8ff9506448aa7d619d7db4c52ff489ea" name="a8ff9506448aa7d619d7db4c52ff489ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ff9506448aa7d619d7db4c52ff489ea">&#9670;&nbsp;</a></span>Odbierz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Odbierz </td>
+          <td>(</td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja otwiera odpowiedni port komunikacyjny, wczytuje otrzymana wiadomosc oraz sprawdza sume kontrolna przeslanej wiadomosci. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>- Poprawnie odebrano wiadomosc </td></tr>
+    <tr><td class="paramname">-1</td><td>- Blad podczas odbierania wiadomosci </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6f2156dbc70873befb3100b88721eed3" name="a6f2156dbc70873befb3100b88721eed3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f2156dbc70873befb3100b88721eed3">&#9670;&nbsp;</a></span>RS232_Odbierz() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RS232_Odbierz </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>DeskPortu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char &amp;&#160;</td>
+          <td class="paramname"><em>BuforZnaku</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja odczytuje liczbe znakow w wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>Liczba odebranych znakow wiadomosci jest wieksza od 1 </td></tr>
+    <tr><td class="paramname">FALSE</td><td>Nie udalo sie odebrac wiadomosci, liczba znakow wynosi 0 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab508e708cea79698a8d0ec837fe044d4" name="ab508e708cea79698a8d0ec837fe044d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab508e708cea79698a8d0ec837fe044d4">&#9670;&nbsp;</a></span>RS232_Odbierz() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RS232_Odbierz </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>DeskPortu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string &amp;&#160;</td>
+          <td class="paramname"><em>Bufor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>IloscZnakow</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja odczytuje pojedynczy znak wiadomosci oraz sprawdza czy nie zostal przekroczony czas wczytywania. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>Poprawnie wczytano znak </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

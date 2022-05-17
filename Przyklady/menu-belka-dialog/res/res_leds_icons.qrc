@@ -1,0 +1,25 @@
+<RCC>
+  <qresource prefix="LED">
+    <file>img/led/led_blue.png</file>
+    <file>img/led/led_green.png</file>
+    <file>img/led/led_lightGray.png</file>
+    <file>img/led/led_red.png</file>
+    <file>img/led/led_yellow.png</file>
+    <file>img/led/led_yellow-00.png</file>
+    <file>img/led/led_yellow-01.png</file>
+    <file>img/led/led_yellow-02.png</file>
+    <file>img/led/led_yellow-03.png</file>
+    <file>img/led/led_yellow-04.png</file>
+    <file>img/led/led_yellow-05.png</file>
+    <file>img/led/led_yellow-06.png</file>
+    <file>img/led/led_yellow-07.png</file>
+    <file>img/led/led_yellow-08.png</file>
+    <file>img/led/led_yellow-09.png</file>
+    <file>img/led/led_yellow-10.png</file>
+    <file>img/led/led_yellow-11.png</file>
+  </qresource>
+  <qresource prefix="Menu">
+    <file>img/misc/exit.png</file>
+    <file>img/misc/settings.png</file>
+  </qresource>
+</RCC>

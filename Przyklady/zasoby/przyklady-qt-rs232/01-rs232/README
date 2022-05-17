@@ -1,0 +1,5 @@
+Przykład realizacji komunikacji bez osobnego
+wątku z wykorzytaniem metody QApplication::processEvents().
+
+Uruchomienie przykładu wymaga połączenie dwóch portów USB
+poprzez dwie przejściówki USB<->RS232.

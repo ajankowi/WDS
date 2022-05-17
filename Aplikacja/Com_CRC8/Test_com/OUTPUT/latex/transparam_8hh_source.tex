@@ -1,0 +1,59 @@
+\hypertarget{transparam_8hh_source}{}\doxysection{transparam.\+hh}
+\label{transparam_8hh_source}\index{inc/transparam.hh@{inc/transparam.hh}}
+\mbox{\hyperlink{transparam_8hh}{Idź do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TRANSPARAM\_HH}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TRANSPARAM\_HH}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <termios.h>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{12 \textcolor{keyword}{enum} \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4Parity}} \{}
+\DoxyCodeLine{13   \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a34382ce4bb40c1824bcca93bc234ab6b}{P\_None}}  ,}
+\DoxyCodeLine{14   \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ad9cecbcfe646fb2ce2698ba1daf23d62}{P\_Even}}  ,}
+\DoxyCodeLine{15   \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ac4d5e9249b497ebae3148a6545300842}{P\_Odd}}   ,}
+\DoxyCodeLine{16   \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a2457874c281d6ec0f92dc6e61f79587d}{P\_Mark}}  ,}
+\DoxyCodeLine{17   \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a016cb8ef0f82bf2ea07e6cf6c0e63882}{P\_Space}} }
+\DoxyCodeLine{18 \};}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 }
+\DoxyCodeLine{26 \textcolor{keyword}{enum} \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4BaudRate}} \{}
+\DoxyCodeLine{27     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa47289a31fc82b611270f1f065dd29374}{B\_0}} = B0,}
+\DoxyCodeLine{28     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9401cafe870d964773dd29c41dd9725e}{B\_50}} = B50,}
+\DoxyCodeLine{29     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa677772bcffc885d68682ea2e57a96369}{B\_75}} = B75,}
+\DoxyCodeLine{30     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fad6c9bbc6b9d05dfce96cc12c70190b53}{B\_110}} = B110,}
+\DoxyCodeLine{31     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa6741f347183b1cc2b8e40eb83a2555c2}{B\_134}} = B134,}
+\DoxyCodeLine{32     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa0005d784524361a5cdebe194bc9a7e95}{B\_150}} = B150,}
+\DoxyCodeLine{33     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa510049aa4782215852025c13fd141efc}{B\_200}} = B200,}
+\DoxyCodeLine{34     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fabd0f221fb68bcb918831d4eb9d5e2e53}{B\_300}} = B300,}
+\DoxyCodeLine{35     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288faad53e0d4baaafd1d93514a739f25d89e}{B\_600}} = B600,}
+\DoxyCodeLine{36     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae3f5102fc8661e8b758980d442c11b8e}{B\_1200}} = B1200,}
+\DoxyCodeLine{37     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa3a49add2b8f9e87593226dc34583f5d0}{B\_1800}} = B1800,}
+\DoxyCodeLine{38     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa2898cf1c1e6cdb0b7fc6fff5c142c4ba}{B\_2400}} = B2400,}
+\DoxyCodeLine{39     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa27a92d1ac239b3d44e3a8fc27b6b039f}{B\_4800}} = B4800,}
+\DoxyCodeLine{40     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae7bf4de131e0edb182e39d87d3027018}{B\_9600}} = B9600,}
+\DoxyCodeLine{41     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa4ecf44e3017ea2b99239d127250289d1}{B\_19200}} = B19200,}
+\DoxyCodeLine{42     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288faba0b508458bf2a54509bb8a20478ca93}{B\_38400}} = B38400,}
+\DoxyCodeLine{43     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa499f4f816c2ffec705d374891bc6eb51}{B\_57600}} = B57600,}
+\DoxyCodeLine{44     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae5aff27725ed62df17a9d52c9435d0d5}{B\_115200}} = B115200,}
+\DoxyCodeLine{45     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9ec9266a076b069458fcabcac21f748f}{B\_230400}} = B230400}
+\DoxyCodeLine{46 \};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 }
+\DoxyCodeLine{54 \textcolor{keyword}{enum} \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4CharacterSize}} \{}
+\DoxyCodeLine{55   \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90ae8764489eb63e8cfa4e79d91e26f90a3}{CS\_5}} = CS5 ,}
+\DoxyCodeLine{56   \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a1625f022daa414fd47e25c90eff82460}{CS\_6}} = CS6 ,}
+\DoxyCodeLine{57   \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a83bba2f5593a571fa5bcadb504f035cd}{CS\_7}} = CS7 ,}
+\DoxyCodeLine{58   \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90aca6d77a969cda9a7d5b3764645230ca8}{CS\_8}} = CS8 }
+\DoxyCodeLine{59 \};}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61 }
+\DoxyCodeLine{62 }
+\DoxyCodeLine{66 \textcolor{keywordtype}{bool} \mbox{\hyperlink{transparam_8hh_a5d46c158a650fc57430cc40fcefd17da}{SetTransParam}}( \textcolor{keywordtype}{int}                  PortDesc,}
+\DoxyCodeLine{67                     \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4BaudRate}}        BRate  = \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae7bf4de131e0edb182e39d87d3027018}{B\_9600}},}
+\DoxyCodeLine{68                     \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4Parity}}          Parity = \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a34382ce4bb40c1824bcca93bc234ab6b}{P\_None}},}
+\DoxyCodeLine{69                     \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4CharacterSize}}   CSize = \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90aca6d77a969cda9a7d5b3764645230ca8}{CS\_8}}}
+\DoxyCodeLine{70           );}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

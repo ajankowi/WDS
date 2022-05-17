@@ -1,0 +1,66 @@
+\hypertarget{transparam_8cpp}{}\doxysection{Dokumentacja pliku src/transparam.cpp}
+\label{transparam_8cpp}\index{src/transparam.cpp@{src/transparam.cpp}}
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}transparam.\+hh\char`\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{transparam_8cpp_a0728e8853a57cc2290d9739c1108d2fc}{Set\+Trans\+Param\+\_\+\+Input\+Modes}} (struct termios $\ast$p\+Trans\+Param, \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}} Parity)
+\item 
+void \mbox{\hyperlink{transparam_8cpp_acb0647d46d75d5baa3508f59750fd510}{Set\+Trans\+Param\+\_\+\+Output\+Modes}} (struct termios $\ast$p\+Trans\+Param)
+\item 
+void \mbox{\hyperlink{transparam_8cpp_a7585c6873219f5b0cae001b4e95a60af}{Set\+Trans\+Param\+\_\+\+Control\+Modes}} (struct termios $\ast$p\+Trans\+Param, \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}} Parity, \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}} CSize)
+\item 
+void \mbox{\hyperlink{transparam_8cpp_ad26bdc052d530d02b4353582e1d9568b}{Set\+Trans\+Param\+\_\+\+Local\+Modes}} (struct termios $\ast$p\+Trans\+Param)
+\item 
+bool \mbox{\hyperlink{transparam_8cpp_abbc868041fa51d5f4d3923d8b3488867}{Set\+Trans\+Param}} (int Port\+Desc, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4\+Baud\+Rate}} BRate, \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}} Parity, \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}} CSize)
+\begin{DoxyCompactList}\small\item\em Ustawianie parametrów transmisji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{transparam_8cpp_abbc868041fa51d5f4d3923d8b3488867}\label{transparam_8cpp_abbc868041fa51d5f4d3923d8b3488867}} 
+\index{transparam.cpp@{transparam.cpp}!SetTransParam@{SetTransParam}}
+\index{SetTransParam@{SetTransParam}!transparam.cpp@{transparam.cpp}}
+\doxysubsubsection{\texorpdfstring{SetTransParam()}{SetTransParam()}}
+{\footnotesize\ttfamily bool Set\+Trans\+Param (\begin{DoxyParamCaption}\item[{int}]{Port\+Desc,  }\item[{\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4\+Baud\+Rate}}}]{BRate,  }\item[{\mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}}}]{Parity,  }\item[{\mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}}}]{CSize }\end{DoxyParamCaption})}
+
+
+
+Ustawianie parametrów transmisji. 
+
+Ustawianie parametrów transmisji \mbox{\Hypertarget{transparam_8cpp_a7585c6873219f5b0cae001b4e95a60af}\label{transparam_8cpp_a7585c6873219f5b0cae001b4e95a60af}} 
+\index{transparam.cpp@{transparam.cpp}!SetTransParam\_ControlModes@{SetTransParam\_ControlModes}}
+\index{SetTransParam\_ControlModes@{SetTransParam\_ControlModes}!transparam.cpp@{transparam.cpp}}
+\doxysubsubsection{\texorpdfstring{SetTransParam\_ControlModes()}{SetTransParam\_ControlModes()}}
+{\footnotesize\ttfamily void Set\+Trans\+Param\+\_\+\+Control\+Modes (\begin{DoxyParamCaption}\item[{struct termios $\ast$}]{p\+Trans\+Param,  }\item[{\mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}}}]{Parity,  }\item[{\mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}}}]{CSize }\end{DoxyParamCaption})}
+
+Ustawia parametry transmisji\+: \begin{DoxyItemize}
+\item 8 bitów w znaku, \item 1 bit stopu, 
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Parity} & -\/ pozwala na ustawienie rodzaju kontroli parzystości. \\
+\hline
+\end{DoxyParams}
+\end{DoxyItemize}
+\mbox{\Hypertarget{transparam_8cpp_a0728e8853a57cc2290d9739c1108d2fc}\label{transparam_8cpp_a0728e8853a57cc2290d9739c1108d2fc}} 
+\index{transparam.cpp@{transparam.cpp}!SetTransParam\_InputModes@{SetTransParam\_InputModes}}
+\index{SetTransParam\_InputModes@{SetTransParam\_InputModes}!transparam.cpp@{transparam.cpp}}
+\doxysubsubsection{\texorpdfstring{SetTransParam\_InputModes()}{SetTransParam\_InputModes()}}
+{\footnotesize\ttfamily void Set\+Trans\+Param\+\_\+\+Input\+Modes (\begin{DoxyParamCaption}\item[{struct termios $\ast$}]{p\+Trans\+Param,  }\item[{\mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}}}]{Parity }\end{DoxyParamCaption})}
+
+Opis flag patrz\+: man tcsetattr \mbox{\Hypertarget{transparam_8cpp_ad26bdc052d530d02b4353582e1d9568b}\label{transparam_8cpp_ad26bdc052d530d02b4353582e1d9568b}} 
+\index{transparam.cpp@{transparam.cpp}!SetTransParam\_LocalModes@{SetTransParam\_LocalModes}}
+\index{SetTransParam\_LocalModes@{SetTransParam\_LocalModes}!transparam.cpp@{transparam.cpp}}
+\doxysubsubsection{\texorpdfstring{SetTransParam\_LocalModes()}{SetTransParam\_LocalModes()}}
+{\footnotesize\ttfamily void Set\+Trans\+Param\+\_\+\+Local\+Modes (\begin{DoxyParamCaption}\item[{struct termios $\ast$}]{p\+Trans\+Param }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{transparam_8cpp_acb0647d46d75d5baa3508f59750fd510}\label{transparam_8cpp_acb0647d46d75d5baa3508f59750fd510}} 
+\index{transparam.cpp@{transparam.cpp}!SetTransParam\_OutputModes@{SetTransParam\_OutputModes}}
+\index{SetTransParam\_OutputModes@{SetTransParam\_OutputModes}!transparam.cpp@{transparam.cpp}}
+\doxysubsubsection{\texorpdfstring{SetTransParam\_OutputModes()}{SetTransParam\_OutputModes()}}
+{\footnotesize\ttfamily void Set\+Trans\+Param\+\_\+\+Output\+Modes (\begin{DoxyParamCaption}\item[{struct termios $\ast$}]{p\+Trans\+Param }\end{DoxyParamCaption})}
+
+Opis flag patrz\+: man tcsetattr 

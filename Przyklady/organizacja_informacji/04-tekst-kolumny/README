@@ -1,0 +1,8 @@
+W stosunku do przykładu 03 zostały zmienione atrybuty
+obiektów QLabel, w których wyświetlane są wartości.
+Dzięki temu lepiej się odróżniają. Jednak "grube" ramki wokół
+nich nie dają dobrego efektu. Są zbyt "agresywne".
+Można to oczywiście zmienić.
+Do zarządzania geometrią elementów informacyjnych, tak jak wcześniej
+użyto QGridLayout.
+

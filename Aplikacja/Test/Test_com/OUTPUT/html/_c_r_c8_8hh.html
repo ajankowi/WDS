@@ -1,0 +1,395 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Skaner 3D: Dokumentacja pliku inc/CRC8.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Skaner 3D<span id="projectnumber">&#160;V1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_bfccd401955b95cf8c75461437045ac0.html">inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definicje</a> &#124;
+<a href="#typedef-members">Definicje typów</a> &#124;
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku CRC8.hh</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+<code>#include &lt;cassert&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;bitset&gt;</code><br />
+</div>
+<p><a href="_c_r_c8_8hh_source.html">Idź do kodu źródłowego tego pliku.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Definicje</h2></td></tr>
+<tr class="memitem:ae7295ab9ac7d1cd2196d4e4a62c84e77"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#ae7295ab9ac7d1cd2196d4e4a62c84e77">POLYNOMIAL_9</a>&#160;&#160;&#160;0x161</td></tr>
+<tr class="separator:ae7295ab9ac7d1cd2196d4e4a62c84e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Definicje typów</h2></td></tr>
+<tr class="memitem:a0c8186d9b9b7880309c27230bbb5e69d"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td></tr>
+<tr class="separator:a0c8186d9b9b7880309c27230bbb5e69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a3b6cdad88337909c7008f4c45fa391f8"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#a3b6cdad88337909c7008f4c45fa391f8">CRC8_SingleByte</a> (unsigned int Data2)</td></tr>
+<tr class="memdesc:a3b6cdad88337909c7008f4c45fa391f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja konwertuje pojedynczy bit.  <a href="_c_r_c8_8hh.html#a3b6cdad88337909c7008f4c45fa391f8">Więcej...</a><br /></td></tr>
+<tr class="separator:a3b6cdad88337909c7008f4c45fa391f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb82eecef5aac384be3bf818f89574ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#adb82eecef5aac384be3bf818f89574ff">CRC8_DataArray</a> (const <a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *pDataFrame, <a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> Len)</td></tr>
+<tr class="memdesc:adb82eecef5aac384be3bf818f89574ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja oblicza odpowiednia wartosc sumy kontrolnej w zaleznosci od wiadomosci.  <a href="_c_r_c8_8hh.html#adb82eecef5aac384be3bf818f89574ff">Więcej...</a><br /></td></tr>
+<tr class="separator:adb82eecef5aac384be3bf818f89574ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca71078384d40144f0e40dd289f81848"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#aca71078384d40144f0e40dd289f81848">CRC8_DataArray</a> (const char *pDataFrame, <a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> Len)</td></tr>
+<tr class="memdesc:aca71078384d40144f0e40dd289f81848"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja konwertuje rozmiar const char* na const bite*.  <a href="_c_r_c8_8hh.html#aca71078384d40144f0e40dd289f81848">Więcej...</a><br /></td></tr>
+<tr class="separator:aca71078384d40144f0e40dd289f81848"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac31eb82d2e9168e5beced051f7f9e931"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#ac31eb82d2e9168e5beced051f7f9e931">ParseDataFrame</a> (const char *pDataFrame, int &amp;AccX)</td></tr>
+<tr class="memdesc:ac31eb82d2e9168e5beced051f7f9e931"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja sprawdza popranosc danej ramki danych w zaleznosci od przeslanej wiadomosci.  <a href="_c_r_c8_8hh.html#ac31eb82d2e9168e5beced051f7f9e931">Więcej...</a><br /></td></tr>
+<tr class="separator:ac31eb82d2e9168e5beced051f7f9e931"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32b823e0b46ad7a42bdfc587ddafdfda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#a32b823e0b46ad7a42bdfc587ddafdfda">ParseDataFrame</a> (const std::string &amp;rDataFrame, int &amp;AccX)</td></tr>
+<tr class="memdesc:a32b823e0b46ad7a42bdfc587ddafdfda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja konwertuje rozmiar string na const char* oraz uruchamia funckje <a class="el" href="_c_r_c8_8hh.html#ac31eb82d2e9168e5beced051f7f9e931" title="Funkcja sprawdza popranosc danej ramki danych w zaleznosci od przeslanej wiadomosci.">ParseDataFrame( const char *pDataFrame, int &amp;AccX)</a>  <a href="_c_r_c8_8hh.html#a32b823e0b46ad7a42bdfc587ddafdfda">Więcej...</a><br /></td></tr>
+<tr class="separator:a32b823e0b46ad7a42bdfc587ddafdfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59937f7079888b0596b5c4d364b865d2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#a59937f7079888b0596b5c4d364b865d2">CreateDataFrame</a> (int AccX)</td></tr>
+<tr class="memdesc:a59937f7079888b0596b5c4d364b865d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja tworzy odpowiednia ramke danych zawierajaca znak 'X' na poczatku, przesylana wiadomosc oraz sume kontrolna.  <a href="_c_r_c8_8hh.html#a59937f7079888b0596b5c4d364b865d2">Więcej...</a><br /></td></tr>
+<tr class="separator:a59937f7079888b0596b5c4d364b865d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad368e716ffe84b5983950bf1925ac81a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_c_r_c8_8hh.html#ad368e716ffe84b5983950bf1925ac81a">min</a> ()</td></tr>
+<tr class="memdesc:ad368e716ffe84b5983950bf1925ac81a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Funkcja laczy i sprawdza poprawnosc dzialania tworzenia i odbierania wiadomosci z suma kontrolna.  <a href="_c_r_c8_8hh.html#ad368e716ffe84b5983950bf1925ac81a">Więcej...</a><br /></td></tr>
+<tr class="separator:ad368e716ffe84b5983950bf1925ac81a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja definicji</h2>
+<a id="ae7295ab9ac7d1cd2196d4e4a62c84e77" name="ae7295ab9ac7d1cd2196d4e4a62c84e77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7295ab9ac7d1cd2196d4e4a62c84e77">&#9670;&nbsp;</a></span>POLYNOMIAL_9</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POLYNOMIAL_9&#160;&#160;&#160;0x161</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja definicji typów</h2>
+<a id="a0c8186d9b9b7880309c27230bbb5e69d" name="a0c8186d9b9b7880309c27230bbb5e69d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c8186d9b9b7880309c27230bbb5e69d">&#9670;&nbsp;</a></span>byte</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unsigned char <a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="adb82eecef5aac384be3bf818f89574ff" name="adb82eecef5aac384be3bf818f89574ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb82eecef5aac384be3bf818f89574ff">&#9670;&nbsp;</a></span>CRC8_DataArray() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> CRC8_DataArray </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> *&#160;</td>
+          <td class="paramname"><em>pDataFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
+          <td class="paramname"><em>Len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja oblicza odpowiednia wartosc sumy kontrolnej w zaleznosci od wiadomosci. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Zwraca</td><td>odpowiednia wartosc sumy kontrolnej </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aca71078384d40144f0e40dd289f81848" name="aca71078384d40144f0e40dd289f81848"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca71078384d40144f0e40dd289f81848">&#9670;&nbsp;</a></span>CRC8_DataArray() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a> CRC8_DataArray </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pDataFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="_c_r_c8_8hh.html#a0c8186d9b9b7880309c27230bbb5e69d">byte</a>&#160;</td>
+          <td class="paramname"><em>Len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funkcja konwertuje rozmiar const char* na const bite*. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Zwraca</td><td>odpowiednia wartosc sumy kontrolnej </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3b6cdad88337909c7008f4c45fa391f8" name="a3b6cdad88337909c7008f4c45fa391f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6cdad88337909c7008f4c45fa391f8">&#9670;&nbsp;</a></span>CRC8_SingleByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int CRC8_SingleByte </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>Data2</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja konwertuje pojedynczy bit. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Odpowiedno</td><td>przkonwertowany bit </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a59937f7079888b0596b5c4d364b865d2" name="a59937f7079888b0596b5c4d364b865d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59937f7079888b0596b5c4d364b865d2">&#9670;&nbsp;</a></span>CreateDataFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string CreateDataFrame </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>AccX</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja tworzy odpowiednia ramke danych zawierajaca znak 'X' na poczatku, przesylana wiadomosc oraz sume kontrolna. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">Zwracany</td><td>jest string zawierajacy ramke danych </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad368e716ffe84b5983950bf1925ac81a" name="ad368e716ffe84b5983950bf1925ac81a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad368e716ffe84b5983950bf1925ac81a">&#9670;&nbsp;</a></span>min()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int min </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja laczy i sprawdza poprawnosc dzialania tworzenia i odbierania wiadomosci z suma kontrolna. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>poprawnie udalo sie wykonac funkcje </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac31eb82d2e9168e5beced051f7f9e931" name="ac31eb82d2e9168e5beced051f7f9e931"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac31eb82d2e9168e5beced051f7f9e931">&#9670;&nbsp;</a></span>ParseDataFrame() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ParseDataFrame </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pDataFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>AccX</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Funkcja sprawdza popranosc danej ramki danych w zaleznosci od przeslanej wiadomosci. </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>Odebrana ramka danych jest poprawna </td></tr>
+    <tr><td class="paramname">FALSE</td><td>Blad danych wejsciowych lub blad w ramce danych </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a32b823e0b46ad7a42bdfc587ddafdfda" name="a32b823e0b46ad7a42bdfc587ddafdfda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32b823e0b46ad7a42bdfc587ddafdfda">&#9670;&nbsp;</a></span>ParseDataFrame() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ParseDataFrame </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rDataFrame</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int &amp;&#160;</td>
+          <td class="paramname"><em>AccX</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Funkcja konwertuje rozmiar string na const char* oraz uruchamia funckje <a class="el" href="_c_r_c8_8hh.html#ac31eb82d2e9168e5beced051f7f9e931" title="Funkcja sprawdza popranosc danej ramki danych w zaleznosci od przeslanej wiadomosci.">ParseDataFrame( const char *pDataFrame, int &amp;AccX)</a> </p>
+<dl class="retval"><dt>Zwracane wartości</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">TRUE</td><td>Odebrana ramka danych jest poprawna </td></tr>
+    <tr><td class="paramname">FALSE</td><td>Blad danych wejsciowych lub blad w ramce danych </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

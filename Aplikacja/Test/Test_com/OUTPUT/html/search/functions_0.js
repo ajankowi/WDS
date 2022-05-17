@@ -1,0 +1,7 @@
+var searchData=
+[
+  ['crc8_5fdataarray_0',['CRC8_DataArray',['../_c_r_c8_8hh.html#adb82eecef5aac384be3bf818f89574ff',1,'CRC8_DataArray(const byte *pDataFrame, byte Len):&#160;CRC8.cpp'],['../_c_r_c8_8hh.html#aca71078384d40144f0e40dd289f81848',1,'CRC8_DataArray(const char *pDataFrame, byte Len):&#160;CRC8.cpp'],['../_c_r_c8_8cpp.html#adb82eecef5aac384be3bf818f89574ff',1,'CRC8_DataArray(const byte *pDataFrame, byte Len):&#160;CRC8.cpp'],['../_c_r_c8_8cpp.html#aca71078384d40144f0e40dd289f81848',1,'CRC8_DataArray(const char *pDataFrame, byte Len):&#160;CRC8.cpp']]],
+  ['crc8_5fsinglebyte_1',['CRC8_SingleByte',['../_c_r_c8_8hh.html#a3b6cdad88337909c7008f4c45fa391f8',1,'CRC8_SingleByte(unsigned int Data2):&#160;CRC8.cpp'],['../_c_r_c8_8cpp.html#a3b6cdad88337909c7008f4c45fa391f8',1,'CRC8_SingleByte(unsigned int Data2):&#160;CRC8.cpp']]],
+  ['createdataframe_2',['CreateDataFrame',['../_c_r_c8_8hh.html#a59937f7079888b0596b5c4d364b865d2',1,'CreateDataFrame(int AccX):&#160;CRC8.cpp'],['../_c_r_c8_8cpp.html#a59937f7079888b0596b5c4d364b865d2',1,'CreateDataFrame(int AccX):&#160;CRC8.cpp']]],
+  ['czas_5fjestpozniejniz_3',['Czas_JestPozniejNiz',['../odbieranie_8hh.html#acb92bf56d0e1ea8c61397989de2972c5',1,'Czas_JestPozniejNiz(const struct timespec &amp;CzasX):&#160;odbieranie.cpp'],['../odbieranie_8cpp.html#acb92bf56d0e1ea8c61397989de2972c5',1,'Czas_JestPozniejNiz(const struct timespec &amp;CzasX):&#160;odbieranie.cpp']]]
+];

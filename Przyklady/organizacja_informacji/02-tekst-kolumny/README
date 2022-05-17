@@ -1,0 +1,7 @@
+W stosunku do przykładu 01 tekst z wyświetlaną informacją jest
+już nieco lepiej ułożony. Wyświetlane wartości znajdują się
+w jednej kolumnie.
+Kolejne pozycje składają się z opisu wyświetlanej wartości
+oraz drugiego elementu, który zawiera wyświetlaną wielkość
+wraz z jednostką.
+Do zarządzania geometrią tych elementów wykorzystano QFormLayout.

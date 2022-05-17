@@ -1,0 +1,255 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.3"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Skaner 3D: Dokumentacja pliku src/transparam.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Skaner 3D<span id="projectnumber">&#160;V1.1</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.9.3 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Szukaj','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja pliku transparam.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;fcntl.h&gt;</code><br />
+<code>#include &lt;termios.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="transparam_8hh_source.html">transparam.hh</a>&quot;</code><br />
+<code>#include &lt;cstring&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:a0728e8853a57cc2290d9739c1108d2fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transparam_8cpp.html#a0728e8853a57cc2290d9739c1108d2fc">SetTransParam_InputModes</a> (struct termios *pTransParam, <a class="el" href="transparam_8hh.html#a8ff99acb992470a0e45a2ab0cb77b237">Type4Parity</a> Parity)</td></tr>
+<tr class="separator:a0728e8853a57cc2290d9739c1108d2fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb0647d46d75d5baa3508f59750fd510"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transparam_8cpp.html#acb0647d46d75d5baa3508f59750fd510">SetTransParam_OutputModes</a> (struct termios *pTransParam)</td></tr>
+<tr class="separator:acb0647d46d75d5baa3508f59750fd510"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7585c6873219f5b0cae001b4e95a60af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transparam_8cpp.html#a7585c6873219f5b0cae001b4e95a60af">SetTransParam_ControlModes</a> (struct termios *pTransParam, <a class="el" href="transparam_8hh.html#a8ff99acb992470a0e45a2ab0cb77b237">Type4Parity</a> Parity, <a class="el" href="transparam_8hh.html#ad43ec836453f31ea6160c8ec311a9d90">Type4CharacterSize</a> CSize)</td></tr>
+<tr class="separator:a7585c6873219f5b0cae001b4e95a60af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad26bdc052d530d02b4353582e1d9568b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transparam_8cpp.html#ad26bdc052d530d02b4353582e1d9568b">SetTransParam_LocalModes</a> (struct termios *pTransParam)</td></tr>
+<tr class="separator:ad26bdc052d530d02b4353582e1d9568b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbc868041fa51d5f4d3923d8b3488867"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transparam_8cpp.html#abbc868041fa51d5f4d3923d8b3488867">SetTransParam</a> (int PortDesc, <a class="el" href="transparam_8hh.html#aaaf70130106e45f329823bb7383b288f">Type4BaudRate</a> BRate, <a class="el" href="transparam_8hh.html#a8ff99acb992470a0e45a2ab0cb77b237">Type4Parity</a> Parity, <a class="el" href="transparam_8hh.html#ad43ec836453f31ea6160c8ec311a9d90">Type4CharacterSize</a> CSize)</td></tr>
+<tr class="memdesc:abbc868041fa51d5f4d3923d8b3488867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ustawianie parametrów transmisji.  <a href="transparam_8cpp.html#abbc868041fa51d5f4d3923d8b3488867">Więcej...</a><br /></td></tr>
+<tr class="separator:abbc868041fa51d5f4d3923d8b3488867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a id="abbc868041fa51d5f4d3923d8b3488867" name="abbc868041fa51d5f4d3923d8b3488867"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc868041fa51d5f4d3923d8b3488867">&#9670;&nbsp;</a></span>SetTransParam()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SetTransParam </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>PortDesc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="transparam_8hh.html#aaaf70130106e45f329823bb7383b288f">Type4BaudRate</a>&#160;</td>
+          <td class="paramname"><em>BRate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="transparam_8hh.html#a8ff99acb992470a0e45a2ab0cb77b237">Type4Parity</a>&#160;</td>
+          <td class="paramname"><em>Parity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="transparam_8hh.html#ad43ec836453f31ea6160c8ec311a9d90">Type4CharacterSize</a>&#160;</td>
+          <td class="paramname"><em>CSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ustawianie parametrów transmisji. </p>
+<p >Ustawianie parametrów transmisji </p>
+
+</div>
+</div>
+<a id="a7585c6873219f5b0cae001b4e95a60af" name="a7585c6873219f5b0cae001b4e95a60af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7585c6873219f5b0cae001b4e95a60af">&#9670;&nbsp;</a></span>SetTransParam_ControlModes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTransParam_ControlModes </td>
+          <td>(</td>
+          <td class="paramtype">struct termios *&#160;</td>
+          <td class="paramname"><em>pTransParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="transparam_8hh.html#a8ff99acb992470a0e45a2ab0cb77b237">Type4Parity</a>&#160;</td>
+          <td class="paramname"><em>Parity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="transparam_8hh.html#ad43ec836453f31ea6160c8ec311a9d90">Type4CharacterSize</a>&#160;</td>
+          <td class="paramname"><em>CSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Ustawia parametry transmisji: </p><ul>
+<li>8 bitów w znaku, </li>
+<li>1 bit stopu, <dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">Parity</td><td>- pozwala na ustawienie rodzaju kontroli parzystości. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
+</div>
+</div>
+<a id="a0728e8853a57cc2290d9739c1108d2fc" name="a0728e8853a57cc2290d9739c1108d2fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0728e8853a57cc2290d9739c1108d2fc">&#9670;&nbsp;</a></span>SetTransParam_InputModes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTransParam_InputModes </td>
+          <td>(</td>
+          <td class="paramtype">struct termios *&#160;</td>
+          <td class="paramname"><em>pTransParam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="transparam_8hh.html#a8ff99acb992470a0e45a2ab0cb77b237">Type4Parity</a>&#160;</td>
+          <td class="paramname"><em>Parity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Opis flag patrz: man tcsetattr </p>
+
+</div>
+</div>
+<a id="ad26bdc052d530d02b4353582e1d9568b" name="ad26bdc052d530d02b4353582e1d9568b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad26bdc052d530d02b4353582e1d9568b">&#9670;&nbsp;</a></span>SetTransParam_LocalModes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTransParam_LocalModes </td>
+          <td>(</td>
+          <td class="paramtype">struct termios *&#160;</td>
+          <td class="paramname"><em>pTransParam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acb0647d46d75d5baa3508f59750fd510" name="acb0647d46d75d5baa3508f59750fd510"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb0647d46d75d5baa3508f59750fd510">&#9670;&nbsp;</a></span>SetTransParam_OutputModes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SetTransParam_OutputModes </td>
+          <td>(</td>
+          <td class="paramtype">struct termios *&#160;</td>
+          <td class="paramname"><em>pTransParam</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p >Opis flag patrz: man tcsetattr </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano przez&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
+</small></address>
+</body>
+</html>

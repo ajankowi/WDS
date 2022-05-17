@@ -1,0 +1,53 @@
+\hypertarget{_c_r_c8_8hh_source}{}\doxysection{CRC8.\+hh}
+\label{_c_r_c8_8hh_source}\index{inc/CRC8.hh@{inc/CRC8.hh}}
+\mbox{\hyperlink{_c_r_c8_8hh}{Id≈∫ do dokumentacji tego pliku.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef INC\_CRC8\_HH\_}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define INC\_CRC8\_HH\_}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <bitset>}}
+\DoxyCodeLine{10 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{11 }
+\DoxyCodeLine{12 }
+\DoxyCodeLine{13 \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{14 \textcolor{comment}{//  Przyk≥ad implementacji obliczania sumy kontrolnej CRC8}}
+\DoxyCodeLine{15 \textcolor{comment}{//  oraz tworzenia ramki danych.}}
+\DoxyCodeLine{16 \textcolor{comment}{//}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{_c_r_c8_8hh_a0c8186d9b9b7880309c27230bbb5e69d}{byte}};}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define POLYNOMIAL\_9 0x161}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{_c_r_c8_8hh_a3b6cdad88337909c7008f4c45fa391f8}{CRC8\_SingleByte}}( \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} Data2 );}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 }
+\DoxyCodeLine{38 \textcolor{keywordtype}{byte} \mbox{\hyperlink{_c_r_c8_8hh_adb82eecef5aac384be3bf818f89574ff}{CRC8\_DataArray}}( \textcolor{keyword}{const} \textcolor{keywordtype}{byte} *pDataFrame, \textcolor{keywordtype}{byte} Len );}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{47 \textcolor{keywordtype}{byte} \mbox{\hyperlink{_c_r_c8_8hh_adb82eecef5aac384be3bf818f89574ff}{CRC8\_DataArray}}( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *pDataFrame, \textcolor{keywordtype}{byte} Len );}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{57 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_c_r_c8_8hh_ac31eb82d2e9168e5beced051f7f9e931}{ParseDataFrame}}( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *pDataFrame, \textcolor{keywordtype}{int} \&AccX);}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{59 }
+\DoxyCodeLine{67 \textcolor{keywordtype}{bool} \mbox{\hyperlink{_c_r_c8_8hh_ac31eb82d2e9168e5beced051f7f9e931}{ParseDataFrame}}( \textcolor{keyword}{const} std::string \&rDataFrame, \textcolor{keywordtype}{int} \&AccX);}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 }
+\DoxyCodeLine{76 std::string \mbox{\hyperlink{_c_r_c8_8hh_a59937f7079888b0596b5c4d364b865d2}{CreateDataFrame}}( \textcolor{keywordtype}{int} AccX);}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 }
+\DoxyCodeLine{85 \textcolor{keywordtype}{int} \mbox{\hyperlink{_c_r_c8_8hh_ad368e716ffe84b5983950bf1925ac81a}{min}}();}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* INC\_CRC8\_HH\_ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,217 @@
+\hypertarget{transparam_8hh}{}\doxysection{Dokumentacja pliku inc/transparam.hh}
+\label{transparam_8hh}\index{inc/transparam.hh@{inc/transparam.hh}}
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+\doxysubsection*{Wyliczenia}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}} \{ \newline
+\mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a34382ce4bb40c1824bcca93bc234ab6b}{P\+\_\+\+None}}
+, \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ad9cecbcfe646fb2ce2698ba1daf23d62}{P\+\_\+\+Even}}
+, \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ac4d5e9249b497ebae3148a6545300842}{P\+\_\+\+Odd}}
+, \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a2457874c281d6ec0f92dc6e61f79587d}{P\+\_\+\+Mark}}
+, \newline
+\mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a016cb8ef0f82bf2ea07e6cf6c0e63882}{P\+\_\+\+Space}}
+ \}
+\begin{DoxyCompactList}\small\item\em Rodzaj kontroli parzystości. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4\+Baud\+Rate}} \{ \newline
+\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa47289a31fc82b611270f1f065dd29374}{B\+\_\+0}} = B0
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9401cafe870d964773dd29c41dd9725e}{B\+\_\+50}} = B50
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa677772bcffc885d68682ea2e57a96369}{B\+\_\+75}} = B75
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fad6c9bbc6b9d05dfce96cc12c70190b53}{B\+\_\+110}} = B110
+, \newline
+\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa6741f347183b1cc2b8e40eb83a2555c2}{B\+\_\+134}} = B134
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa0005d784524361a5cdebe194bc9a7e95}{B\+\_\+150}} = B150
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa510049aa4782215852025c13fd141efc}{B\+\_\+200}} = B200
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fabd0f221fb68bcb918831d4eb9d5e2e53}{B\+\_\+300}} = B300
+, \newline
+\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288faad53e0d4baaafd1d93514a739f25d89e}{B\+\_\+600}} = B600
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae3f5102fc8661e8b758980d442c11b8e}{B\+\_\+1200}} = B1200
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa3a49add2b8f9e87593226dc34583f5d0}{B\+\_\+1800}} = B1800
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa2898cf1c1e6cdb0b7fc6fff5c142c4ba}{B\+\_\+2400}} = B2400
+, \newline
+\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa27a92d1ac239b3d44e3a8fc27b6b039f}{B\+\_\+4800}} = B4800
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae7bf4de131e0edb182e39d87d3027018}{B\+\_\+9600}} = B9600
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa4ecf44e3017ea2b99239d127250289d1}{B\+\_\+19200}} = B19200
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288faba0b508458bf2a54509bb8a20478ca93}{B\+\_\+38400}} = B38400
+, \newline
+\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa499f4f816c2ffec705d374891bc6eb51}{B\+\_\+57600}} = B57600
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae5aff27725ed62df17a9d52c9435d0d5}{B\+\_\+115200}} = B115200
+, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9ec9266a076b069458fcabcac21f748f}{B\+\_\+230400}} = B230400
+ \}
+\begin{DoxyCompactList}\small\item\em Zestaw ustawień szybkości transmisji. \end{DoxyCompactList}\item 
+enum \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}} \{ \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90ae8764489eb63e8cfa4e79d91e26f90a3}{CS\+\_\+5}} = CS5
+, \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a1625f022daa414fd47e25c90eff82460}{CS\+\_\+6}} = CS6
+, \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a83bba2f5593a571fa5bcadb504f035cd}{CS\+\_\+7}} = CS7
+, \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90aca6d77a969cda9a7d5b3764645230ca8}{CS\+\_\+8}} = CS8
+ \}
+\begin{DoxyCompactList}\small\item\em Pozwala na ustawienie rozmiaru transmitowanego znaku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{transparam_8hh_a5d46c158a650fc57430cc40fcefd17da}{Set\+Trans\+Param}} (int Port\+Desc, \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4\+Baud\+Rate}} BRate=\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288fae7bf4de131e0edb182e39d87d3027018}{B\+\_\+9600}}, \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}} Parity=\mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a34382ce4bb40c1824bcca93bc234ab6b}{P\+\_\+\+None}}, \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}} CSize=\mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90aca6d77a969cda9a7d5b3764645230ca8}{CS\+\_\+8}})
+\begin{DoxyCompactList}\small\item\em Ustawianie parametrów transmisji. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Dokumentacja typów wyliczanych}
+\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288f}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288f}} 
+\index{transparam.hh@{transparam.hh}!Type4BaudRate@{Type4BaudRate}}
+\index{Type4BaudRate@{Type4BaudRate}!transparam.hh@{transparam.hh}}
+\doxysubsubsection{\texorpdfstring{Type4BaudRate}{Type4BaudRate}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4\+Baud\+Rate}}}
+
+
+
+Zestaw ustawień szybkości transmisji. 
+
+Typ zawiera zestaw możliwych prędkości transmisji szeregowej. \begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_0@{B\_0}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_0@{B\_0}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa47289a31fc82b611270f1f065dd29374}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa47289a31fc82b611270f1f065dd29374}} 
+B\+\_\+0&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_50@{B\_50}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_50@{B\_50}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9401cafe870d964773dd29c41dd9725e}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9401cafe870d964773dd29c41dd9725e}} 
+B\+\_\+50&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_75@{B\_75}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_75@{B\_75}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa677772bcffc885d68682ea2e57a96369}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa677772bcffc885d68682ea2e57a96369}} 
+B\+\_\+75&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_110@{B\_110}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_110@{B\_110}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fad6c9bbc6b9d05dfce96cc12c70190b53}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fad6c9bbc6b9d05dfce96cc12c70190b53}} 
+B\+\_\+110&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_134@{B\_134}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_134@{B\_134}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa6741f347183b1cc2b8e40eb83a2555c2}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa6741f347183b1cc2b8e40eb83a2555c2}} 
+B\+\_\+134&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_150@{B\_150}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_150@{B\_150}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa0005d784524361a5cdebe194bc9a7e95}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa0005d784524361a5cdebe194bc9a7e95}} 
+B\+\_\+150&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_200@{B\_200}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_200@{B\_200}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa510049aa4782215852025c13fd141efc}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa510049aa4782215852025c13fd141efc}} 
+B\+\_\+200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_300@{B\_300}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_300@{B\_300}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fabd0f221fb68bcb918831d4eb9d5e2e53}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fabd0f221fb68bcb918831d4eb9d5e2e53}} 
+B\+\_\+300&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_600@{B\_600}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_600@{B\_600}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288faad53e0d4baaafd1d93514a739f25d89e}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288faad53e0d4baaafd1d93514a739f25d89e}} 
+B\+\_\+600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_1200@{B\_1200}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_1200@{B\_1200}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fae3f5102fc8661e8b758980d442c11b8e}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fae3f5102fc8661e8b758980d442c11b8e}} 
+B\+\_\+1200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_1800@{B\_1800}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_1800@{B\_1800}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa3a49add2b8f9e87593226dc34583f5d0}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa3a49add2b8f9e87593226dc34583f5d0}} 
+B\+\_\+1800&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_2400@{B\_2400}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_2400@{B\_2400}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa2898cf1c1e6cdb0b7fc6fff5c142c4ba}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa2898cf1c1e6cdb0b7fc6fff5c142c4ba}} 
+B\+\_\+2400&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_4800@{B\_4800}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_4800@{B\_4800}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa27a92d1ac239b3d44e3a8fc27b6b039f}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa27a92d1ac239b3d44e3a8fc27b6b039f}} 
+B\+\_\+4800&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_9600@{B\_9600}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_9600@{B\_9600}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fae7bf4de131e0edb182e39d87d3027018}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fae7bf4de131e0edb182e39d87d3027018}} 
+B\+\_\+9600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_19200@{B\_19200}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_19200@{B\_19200}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa4ecf44e3017ea2b99239d127250289d1}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa4ecf44e3017ea2b99239d127250289d1}} 
+B\+\_\+19200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_38400@{B\_38400}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_38400@{B\_38400}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288faba0b508458bf2a54509bb8a20478ca93}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288faba0b508458bf2a54509bb8a20478ca93}} 
+B\+\_\+38400&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_57600@{B\_57600}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_57600@{B\_57600}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa499f4f816c2ffec705d374891bc6eb51}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa499f4f816c2ffec705d374891bc6eb51}} 
+B\+\_\+57600&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_115200@{B\_115200}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_115200@{B\_115200}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fae5aff27725ed62df17a9d52c9435d0d5}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fae5aff27725ed62df17a9d52c9435d0d5}} 
+B\+\_\+115200&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{B\_230400@{B\_230400}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!B\_230400@{B\_230400}}}\mbox{\Hypertarget{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9ec9266a076b069458fcabcac21f748f}\label{transparam_8hh_aaaf70130106e45f329823bb7383b288fa9ec9266a076b069458fcabcac21f748f}} 
+B\+\_\+230400&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}\label{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}} 
+\index{transparam.hh@{transparam.hh}!Type4CharacterSize@{Type4CharacterSize}}
+\index{Type4CharacterSize@{Type4CharacterSize}!transparam.hh@{transparam.hh}}
+\doxysubsubsection{\texorpdfstring{Type4CharacterSize}{Type4CharacterSize}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}}}
+
+
+
+Pozwala na ustawienie rozmiaru transmitowanego znaku. 
+
+Pozwala na ustawienie rozmiaru transmitowanego znaku. \begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CS\_5@{CS\_5}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!CS\_5@{CS\_5}}}\mbox{\Hypertarget{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90ae8764489eb63e8cfa4e79d91e26f90a3}\label{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90ae8764489eb63e8cfa4e79d91e26f90a3}} 
+CS\+\_\+5&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CS\_6@{CS\_6}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!CS\_6@{CS\_6}}}\mbox{\Hypertarget{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a1625f022daa414fd47e25c90eff82460}\label{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a1625f022daa414fd47e25c90eff82460}} 
+CS\+\_\+6&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CS\_7@{CS\_7}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!CS\_7@{CS\_7}}}\mbox{\Hypertarget{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a83bba2f5593a571fa5bcadb504f035cd}\label{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90a83bba2f5593a571fa5bcadb504f035cd}} 
+CS\+\_\+7&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CS\_8@{CS\_8}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!CS\_8@{CS\_8}}}\mbox{\Hypertarget{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90aca6d77a969cda9a7d5b3764645230ca8}\label{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90aca6d77a969cda9a7d5b3764645230ca8}} 
+CS\+\_\+8&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}\label{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}} 
+\index{transparam.hh@{transparam.hh}!Type4Parity@{Type4Parity}}
+\index{Type4Parity@{Type4Parity}!transparam.hh@{transparam.hh}}
+\doxysubsubsection{\texorpdfstring{Type4Parity}{Type4Parity}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}}}
+
+
+
+Rodzaj kontroli parzystości. 
+
+Elementy typu określają rodzaj kontroli parzystości dla transmisji szeregowej. \begin{DoxyEnumFields}{Wartości wyliczeń}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_None@{P\_None}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!P\_None@{P\_None}}}\mbox{\Hypertarget{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a34382ce4bb40c1824bcca93bc234ab6b}\label{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a34382ce4bb40c1824bcca93bc234ab6b}} 
+P\+\_\+\+None&Brak kontroli parzystości \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_Even@{P\_Even}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!P\_Even@{P\_Even}}}\mbox{\Hypertarget{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ad9cecbcfe646fb2ce2698ba1daf23d62}\label{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ad9cecbcfe646fb2ce2698ba1daf23d62}} 
+P\+\_\+\+Even&Pozytywna kontrola parzystości \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_Odd@{P\_Odd}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!P\_Odd@{P\_Odd}}}\mbox{\Hypertarget{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ac4d5e9249b497ebae3148a6545300842}\label{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237ac4d5e9249b497ebae3148a6545300842}} 
+P\+\_\+\+Odd&Negatywna kontrola parzystości \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_Mark@{P\_Mark}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!P\_Mark@{P\_Mark}}}\mbox{\Hypertarget{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a2457874c281d6ec0f92dc6e61f79587d}\label{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a2457874c281d6ec0f92dc6e61f79587d}} 
+P\+\_\+\+Mark&Bit parzystości zawsze 1 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{P\_Space@{P\_Space}!transparam.hh@{transparam.hh}}\index{transparam.hh@{transparam.hh}!P\_Space@{P\_Space}}}\mbox{\Hypertarget{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a016cb8ef0f82bf2ea07e6cf6c0e63882}\label{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237a016cb8ef0f82bf2ea07e6cf6c0e63882}} 
+P\+\_\+\+Space&Bit parzystości zawsze 0 \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Dokumentacja funkcji}
+\mbox{\Hypertarget{transparam_8hh_a5d46c158a650fc57430cc40fcefd17da}\label{transparam_8hh_a5d46c158a650fc57430cc40fcefd17da}} 
+\index{transparam.hh@{transparam.hh}!SetTransParam@{SetTransParam}}
+\index{SetTransParam@{SetTransParam}!transparam.hh@{transparam.hh}}
+\doxysubsubsection{\texorpdfstring{SetTransParam()}{SetTransParam()}}
+{\footnotesize\ttfamily bool Set\+Trans\+Param (\begin{DoxyParamCaption}\item[{int}]{Port\+Desc,  }\item[{\mbox{\hyperlink{transparam_8hh_aaaf70130106e45f329823bb7383b288f}{Type4\+Baud\+Rate}}}]{BRate,  }\item[{\mbox{\hyperlink{transparam_8hh_a8ff99acb992470a0e45a2ab0cb77b237}{Type4\+Parity}}}]{Parity,  }\item[{\mbox{\hyperlink{transparam_8hh_ad43ec836453f31ea6160c8ec311a9d90}{Type4\+Character\+Size}}}]{CSize }\end{DoxyParamCaption})}
+
+
+
+Ustawianie parametrów transmisji. 
+
+Ustawianie parametrów transmisji 
