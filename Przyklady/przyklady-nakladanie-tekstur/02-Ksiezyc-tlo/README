@@ -1,0 +1,6 @@
+Dla dystrybucji Ubuntu wymagane jest doinstalowanie pakietu
+libsoil-dev oraz pakietów, od których on zależy, tj libsoil1
+lub innych.
+
+Dla innych dystrubucji należy postąpić analogicznie. Różnice
+mogą być w nazwach pakietów.

@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DxControlPanel</class>
+ <widget class="QWidget" name="DxControlPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>745</width>
+    <height>190</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>180</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>190</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Preferred</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>6</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QFrame" name="frame">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>140</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="_pLabel_LightDir">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Kierunek oświetlania:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>15</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <layout class="QGridLayout" name="gridLayout_2">
+            <property name="verticalSpacing">
+             <number>5</number>
+            </property>
+            <item row="0" column="0">
+             <widget class="QLabel" name="_pLabel_X">
+              <property name="text">
+               <string>X </string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QSlider" name="_pSliderX">
+              <property name="minimumSize">
+               <size>
+                <width>200</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="toolTip">
+               <string>Rotation of the second joint</string>
+              </property>
+              <property name="minimum">
+               <number>-90</number>
+              </property>
+              <property name="maximum">
+               <number>90</number>
+              </property>
+              <property name="value">
+               <number>2</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QSpinBox" name="_pSpinBoxX">
+              <property name="minimumSize">
+               <size>
+                <width>60</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="minimum">
+               <number>-90</number>
+              </property>
+              <property name="maximum">
+               <number>90</number>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="_pLabel_Y">
+              <property name="text">
+               <string>Y</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QSlider" name="_pSliderY">
+              <property name="toolTip">
+               <string>Rotation of the second joint</string>
+              </property>
+              <property name="minimum">
+               <number>-90</number>
+              </property>
+              <property name="maximum">
+               <number>90</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="2">
+             <widget class="QSpinBox" name="_pSpinBoxY">
+              <property name="minimum">
+               <number>-90</number>
+              </property>
+              <property name="maximum">
+               <number>90</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="_pLabel_Z">
+              <property name="text">
+               <string>Z </string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QSlider" name="_pSliderZ">
+              <property name="toolTip">
+               <string>Rotation of the second joint</string>
+              </property>
+              <property name="minimum">
+               <number>-90</number>
+              </property>
+              <property name="maximum">
+               <number>90</number>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="2">
+             <widget class="QSpinBox" name="_pSpinBoxZ">
+              <property name="minimum">
+               <number>-90</number>
+              </property>
+              <property name="maximum">
+               <number>90</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>16</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>89</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QFrame" name="frame_2">
+       <property name="minimumSize">
+        <size>
+         <width>320</width>
+         <height>140</height>
+        </size>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Panel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Sunken</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="_pLabel_LightDir_2">
+          <property name="font">
+           <font>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>Kąt obrotu kuli wokół osi OX:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>15</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="_pLabel_Kat">
+            <property name="text">
+             <string>Kat [stopnie]</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSlider" name="_pSliderKat">
+            <property name="toolTip">
+             <string>Rotation of the second joint</string>
+            </property>
+            <property name="minimum">
+             <number>-90</number>
+            </property>
+            <property name="maximum">
+             <number>90</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="_pSpinBoxKat">
+            <property name="minimum">
+             <number>-90</number>
+            </property>
+            <property name="maximum">
+             <number>90</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>78</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>_pSliderKat</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSpinBoxKat</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>671</x>
+     <y>140</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>737</x>
+     <y>139</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_pSpinBoxKat</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSliderKat</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>737</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>671</x>
+     <y>140</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_pSpinBoxZ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSliderZ</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>303</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>210</x>
+     <y>137</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_pSliderZ</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSpinBoxZ</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>214</x>
+     <y>120</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>303</x>
+     <y>125</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_pSpinBoxY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSliderY</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>290</x>
+     <y>93</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>212</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_pSliderY</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSpinBoxY</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>91</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_pSpinBoxX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSliderX</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>284</x>
+     <y>58</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>211</x>
+     <y>56</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>_pSliderX</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>_pSpinBoxX</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>229</x>
+     <y>47</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

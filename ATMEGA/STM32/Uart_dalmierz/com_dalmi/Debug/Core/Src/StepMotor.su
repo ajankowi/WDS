@@ -1,0 +1,3 @@
+StepMotor.c:9:6:HAL_TIM_PeriodElapsedCallback	16	static
+StepMotor.c:18:6:half_step_motor_left	24	static
+StepMotor.c:97:6:half_step_motor_right	24	static

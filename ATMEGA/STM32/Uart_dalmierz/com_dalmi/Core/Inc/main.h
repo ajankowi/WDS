@@ -58,20 +58,36 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define TIM6_PRESCALER 7999
+#define TIM6_PERIOD 9
 #define B1_Pin GPIO_PIN_13
 #define B1_GPIO_Port GPIOC
+#define StepM_1_2_Pin GPIO_PIN_0
+#define StepM_1_2_GPIO_Port GPIOA
+#define StepM_2_2_Pin GPIO_PIN_1
+#define StepM_2_2_GPIO_Port GPIOA
 #define USART_TX_Pin GPIO_PIN_2
 #define USART_TX_GPIO_Port GPIOA
 #define USART_RX_Pin GPIO_PIN_3
 #define USART_RX_GPIO_Port GPIOA
+#define StepM_3_2_Pin GPIO_PIN_4
+#define StepM_3_2_GPIO_Port GPIOA
 #define LD2_Pin GPIO_PIN_5
 #define LD2_GPIO_Port GPIOA
+#define StepM_4_2_Pin GPIO_PIN_0
+#define StepM_4_2_GPIO_Port GPIOB
+#define StepM_1_1_Pin GPIO_PIN_10
+#define StepM_1_1_GPIO_Port GPIOB
 #define TMS_Pin GPIO_PIN_13
 #define TMS_GPIO_Port GPIOA
 #define TCK_Pin GPIO_PIN_14
 #define TCK_GPIO_Port GPIOA
-#define SWO_Pin GPIO_PIN_3
-#define SWO_GPIO_Port GPIOB
+#define StepM_4_1_Pin GPIO_PIN_3
+#define StepM_4_1_GPIO_Port GPIOB
+#define StepM_2_1_Pin GPIO_PIN_4
+#define StepM_2_1_GPIO_Port GPIOB
+#define StepM_3_1_Pin GPIO_PIN_5
+#define StepM_3_1_GPIO_Port GPIOB
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

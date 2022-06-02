@@ -20,6 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
+#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -29,6 +30,7 @@
 #include "string.h"
 #include <math.h>
 #include "vl53l0x_api.h"
+#include "StepMotor.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -78,6 +80,10 @@ int16_t xs = 0;									// Wspolrzedne punktu
 int16_t ys = 0;
 int16_t zs = 0;
 
+int16_t xo = 0;									// Wspolrzedne punktu
+int16_t yo = 0;
+int16_t zo = 0;
+
 int16_t prom = 130;									// Odleglosc czujnika od srodka
 float kat = 0;
 
@@ -89,6 +95,7 @@ float kat = 0;
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 int _write(int file, char *ptr, int len);
+void kalibruj();
 
 void send(int16_t x, int16_t y, int16_t z);
 
@@ -139,6 +146,7 @@ int main(void)
   MX_GPIO_Init();
   MX_USART2_UART_Init();
   MX_I2C1_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
 
   Dev->I2cHandle = &hi2c1;
@@ -165,50 +173,68 @@ int main(void)
 
   __HAL_UART_ENABLE_IT(&huart2,UART_IT_RXNE);
 
+  //printf("\r\n Rozpoczeto skanowanie \r\n");
 
-  printf("\r\n Rozpoczeto skanowanie \r\n");
+
+  //half_step_motor_right(1024,2);
+
+
+  //half_step_motor_right(1024,1);
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
 
-	  VL53L0X_PerformSingleRangingMeasurement(Dev, &RangingData);
+  kalibruj();
 
-	  	if(RangingData.RangeStatus == 0){
-	  		pomiar = RangingData.RangeMilliMeter-20;
-	  	}
+  while(HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin)){HAL_Delay(10);}
 
-	  	//if(pomiar<prom){								// Odrzucanie błędnych pomiarów
-	  		licznik = 0;
-	  		kat = (2*M_PI*a*8)/512;					// Oblicza kąt w radianach
-	  		Ppros = prom - pomiar;						// Oblicza odległosc od srodka silnika krokowego
+  //while (1)
+ // {
+	while((zo<20)&&(licznik<40)){						// Pętla powtarzająca się 20 razu
 
-	  		xs = Ppros*cosf(kat);					// Wspolrzedna X
-	  		ys= Ppros*sinf(kat);					// Wspolrzedna Y
+		for(int a=1; a<65 ;a++){
+			VL53L0X_PerformSingleRangingMeasurement(Dev, &RangingData);
+
+				if(RangingData.RangeStatus == 0){
+					pomiar = RangingData.RangeMilliMeter;
+				}
+
+				pomiar = pomiar - 10;
+
+				//printf("%d\r\n",pomiar);
+				//HAL_Delay(1000);
+
+				if(pomiar<prom){											// Odrzucanie błędnych pomiarów
+
+					licznik = 0;
+					kat = (2*M_PI*a*8)/512;									// Oblicza kąt w radianach
+					Ppros = prom - pomiar;						// Oblicza odległosc od srodka silnika krokowego
+					xo = Ppros*cosf(kat);					// Wspolrzedna X
+					yo = Ppros*sinf(kat);					// Wspolrzedna Y
+					send(xo,yo,zo);
+				}											// Zapisane dane nie zostaja stracone
+				else{
+					licznik++;								// Zwiekszenie licznika
+				}
+				half_step_motor_right(8,1);
+
+		}
+		zo++;
+		half_step_motor_right(1024,2);
+	}
+  	send(144,144,144);
 
 
-	  		send(pomiar,ys,zs);	// Zapisanie wspolrzednych do bufora
-
-	  	//}
-
-
-
-	  	  //if(RangingData.RangeStatus == 0)
-	  	 // {
-	  		//  MessageLen = sprintf((char*)Message, "Measured distance: %i\n\r", RangingData.RangeMilliMeter-20);
-	  		//  HAL_UART_Transmit(&huart2, Message, MessageLen, 100);
-	  		  //printf(Message);
-	  	  //}
-
-	  HAL_Delay(500);
+  return 0;
 
 
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  }
+ // }
   /* USER CODE END 3 */
 }
 
@@ -268,6 +294,35 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+
+void kalibruj(){
+
+	uint8_t flaga = 1;
+
+	//printf( "Kalibracja skanera \r\n");				// Wyswietla komunikat
+
+	while(flaga){
+
+		half_step_motor_left(256,2);			// uruchamia silnik krokowy
+
+		  VL53L0X_PerformSingleRangingMeasurement(Dev, &RangingData);
+
+		  if(RangingData.RangeStatus == 0){
+			if(RangingData.RangeMilliMeter < 250){						// Jezeli pomiar jest mniejszy od 20cm
+				flaga = 0;
+
+				//printf("Skalibrowano skaner\r\n");	// Wyswietla komunikat
+			}
+		}
+	}
+
+	half_step_motor_right(512,2);				// Uruchamia 2 silnik krokowy
+}
+
+
+
+
 int _write(int file, char *ptr, int len){
 
 	  if(HAL_UART_Transmit(&huart2, (uint8_t *) ptr, len, 100) != HAL_OK){
