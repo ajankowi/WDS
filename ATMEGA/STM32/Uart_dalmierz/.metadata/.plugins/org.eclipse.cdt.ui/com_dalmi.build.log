@@ -1,4 +1,4 @@
-13:54:53 **** Incremental Build of configuration Debug for project com_dalmi ****
+19:06:53 **** Incremental Build of configuration Debug for project com_dalmi ****
 make -j12 all 
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L476xx -DDEBUG -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I../Drivers/VL53L0X/platform/inc -I../Drivers/VL53L0X/core/inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-gcc -o "com_dalmi.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\adamj\Desktop\Studia\Semestr_6\WDS\ATMEGA\STM32\Uart_dalmierz\com_dalmi\STM32L476RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="com_dalmi.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -8,7 +8,7 @@ arm-none-eabi-objdump -h -S  com_dalmi.elf  > "com_dalmi.list"
 arm-none-eabi-objcopy  -O binary  com_dalmi.elf  "com_dalmi.bin"
 arm-none-eabi-size   com_dalmi.elf 
    text	   data	    bss	    dec	    hex	filename
-  54808	   1196	   2524	  58528	   e4a0	com_dalmi.elf
+  55256	   1196	   2532	  58984	   e668	com_dalmi.elf
 Finished building: default.size.stdout
  
 Finished building: com_dalmi.bin
@@ -16,5 +16,5 @@ Finished building: com_dalmi.bin
 Finished building: com_dalmi.list
  
 
-13:54:56 Build Finished. 0 errors, 0 warnings. (took 3s.56ms)
+19:06:58 Build Finished. 0 errors, 0 warnings. (took 5s.705ms)
 

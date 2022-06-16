@@ -13,6 +13,7 @@ void half_step_motor_left(uint32_t angle, uint8_t number);
 
 void half_step_motor_right(uint32_t angle, uint8_t number);
 
+void SM_it();
 
 
 
