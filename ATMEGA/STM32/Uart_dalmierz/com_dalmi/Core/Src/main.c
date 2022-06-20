@@ -192,7 +192,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  walec();
+ 
 
 
   while(z != 987){
@@ -225,7 +225,10 @@ int main(void)
 					pomiar = RangingData.RangeMilliMeter;
 				}
 
+
 				pomiar = pomiar - 10;
+
+				//printf("%d\n\r",pomiar);
 
 				//printf("%d\r\n",pomiar);
 				//HAL_Delay(1000);
@@ -235,6 +238,7 @@ int main(void)
 					licznik = 0;
 					kat = (2*M_PI*a*8)/512;									// Oblicza kąt w radianach
 					Ppros = prom - pomiar;						// Oblicza odległosc od srodka silnika krokowego
+					//printf("%d\r\n",Ppros);
 					xo = Ppros*cosf(kat);					// Wspolrzedna X
 					yo = Ppros*sinf(kat);					// Wspolrzedna Y
 					send(xo,yo,3*zo);
@@ -321,32 +325,6 @@ void SystemClock_Config(void)
 /* USER CODE BEGIN 4 */
 
 
-void walec(){
-
-	uint16_t flag1 = 0;
-
-	while(flag1 < 4){						// Pętla powtarzająca się 20 razu
-
-		for(int a=1; a<65 ;a++){
-			    flag1++;
-
-				//printf("%d\r\n",pomiar);
-				//HAL_Delay(1000);
-											// Odrzucanie błędnych pomiarów
-
-				kat = (2*M_PI*a*8)/512;									// Oblicza kąt w radianach
-				Ppros = 40;						// Oblicza odległosc od srodka silnika krokowego
-				xo = Ppros*cosf(kat);					// Wspolrzedna X
-				yo = Ppros*sinf(kat);					// Wspolrzedna Y
-				send(xo,yo,3*zo);
-															// Zapisane dane nie zostaja stracone
-
-		}
-		zo++;
-
-	}
-
-}
 
 void kalibruj(){
 

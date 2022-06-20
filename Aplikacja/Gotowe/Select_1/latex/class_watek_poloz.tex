@@ -1,0 +1,85 @@
+\hypertarget{class_watek_poloz}{}\doxysection{Dokumentacja klasy Watek\+Poloz}
+\label{class_watek_poloz}\index{WatekPoloz@{WatekPoloz}}
+
+
+Klasa \mbox{\hyperlink{class_watek_poloz}{Watek\+Poloz}} sprawdza czy wybrany punkt został zmieniony.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Diagram dziedziczenia dla Watek\+Poloz\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_watek_poloz}
+\end{center}
+\end{figure}
+\doxysubsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_watek_poloz_ad5d9c05b490c240b110d2e4ea5dd444f}{Poloz}} (int, int, int)
+\begin{DoxyCompactList}\small\item\em Metoda Poloz służy do połączenia z metodą on\+Poluz w klasie \mbox{\hyperlink{class_main_window}{Main\+Window}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_watek_poloz_a663176c31d49a280f9acd3b7ca2a1c9c}\label{class_watek_poloz_a663176c31d49a280f9acd3b7ca2a1c9c}} 
+{\bfseries Watek\+Poloz} (QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Inicjalizacja wątku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_poloz_a9010ceee022e8a1f4961b151155d3f55}{run}} ()
+\begin{DoxyCompactList}\small\item\em Uruchamia pracę wątku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_watek_poloz_a93de1805899cebd9994292c5b08294fd}\label{class_watek_poloz_a93de1805899cebd9994292c5b08294fd}} 
+bool {\bfseries \+\_\+\+Start}
+\begin{DoxyCompactList}\small\item\em Zmienna \+\_\+\+Start umożliwia zabicie wątku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa \mbox{\hyperlink{class_watek_poloz}{Watek\+Poloz}} sprawdza czy wybrany punkt został zmieniony. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_watek_poloz_ad5d9c05b490c240b110d2e4ea5dd444f}\label{class_watek_poloz_ad5d9c05b490c240b110d2e4ea5dd444f}} 
+\index{WatekPoloz@{WatekPoloz}!Poloz@{Poloz}}
+\index{Poloz@{Poloz}!WatekPoloz@{WatekPoloz}}
+\doxysubsubsection{\texorpdfstring{Poloz}{Poloz}}
+{\footnotesize\ttfamily void Watek\+Poloz\+::\+Poloz (\begin{DoxyParamCaption}\item[{int}]{,  }\item[{int}]{,  }\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Metoda Poloz służy do połączenia z metodą on\+Poluz w klasie \mbox{\hyperlink{class_main_window}{Main\+Window}}. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em x,y,z} & -\/ współrzędne punktu \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_watek_poloz_a9010ceee022e8a1f4961b151155d3f55}\label{class_watek_poloz_a9010ceee022e8a1f4961b151155d3f55}} 
+\index{WatekPoloz@{WatekPoloz}!run@{run}}
+\index{run@{run}!WatekPoloz@{WatekPoloz}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Watek\+Poloz\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uruchamia pracę wątku. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em x,y,z} & -\/ współrzędne punktu \\
+\hline
+\mbox{\texttt{ out}}  & {\em x,y,z} & -\/ współrzędne nowego punktu \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Zmienia} & współrzędne punktu w momencie gdy użytkownik wybierze inny punkt \\
+\hline
+\end{DoxyRetVals}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

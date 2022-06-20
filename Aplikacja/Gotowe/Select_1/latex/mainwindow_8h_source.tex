@@ -1,0 +1,165 @@
+\hypertarget{mainwindow_8h_source}{}\doxysection{mainwindow.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef MAINWINDOW\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define MAINWINDOW\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <QApplication>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <QWidget>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <QMainWindow>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <QVBoxLayout>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <QListWidget>}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <QLineEdit>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <QIcon>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <QThread>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <QCloseEvent>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <unistd.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <QMessageBox>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <QString>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <QAbstractButton>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <QtCore>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include <QTranslator>}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}rs232\_h/odbieranie.hh"{}}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#include "{}rs232\_h/transparam.hh"{}}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#include "{}rs232\_h/nadawanie.hh"{}}}
+\DoxyCodeLine{23 \textcolor{comment}{//\#include <viewer.h>}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include <cstring>}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include <cassert>}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include <iomanip>}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include <bitset>}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{38 \textcolor{keyword}{namespace }Ui \{ \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}}; \}}
+\DoxyCodeLine{39 QT\_END\_NAMESPACE}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}};}
+\DoxyCodeLine{44 \textcolor{keyword}{class }\mbox{\hyperlink{class_watek_odbioru}{WatekOdbioru}};}
+\DoxyCodeLine{45 \textcolor{keyword}{class }\mbox{\hyperlink{class_watek_com}{WatekCom}};}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{52 \textcolor{keyword}{class }\mbox{\hyperlink{class_punkt}{Punkt}}\{}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{keyword}{public}:}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_punkt_a3c8936f679ef8fc4c1380ebc45820dc4}{x}};}
+\DoxyCodeLine{65     \textcolor{keywordtype}{int} y;}
+\DoxyCodeLine{66     \textcolor{keywordtype}{int} z;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{74     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_punkt_abdaff2cd92e390536c055f409f24a3fd}{ustawPoloz}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_punkt_a3c8936f679ef8fc4c1380ebc45820dc4}{x}}, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} z);}
+\DoxyCodeLine{75 \};}
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 }
+\DoxyCodeLine{81 \textcolor{keyword}{class }\mbox{\hyperlink{class_watek_poloz}{WatekPoloz}} : \textcolor{keyword}{public} QThread}
+\DoxyCodeLine{82 \{}
+\DoxyCodeLine{83     Q\_OBJECT}
+\DoxyCodeLine{84 \textcolor{keyword}{public}:}
+\DoxyCodeLine{85 }
+\DoxyCodeLine{89     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_watek_poloz_a663176c31d49a280f9acd3b7ca2a1c9c}{WatekPoloz}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_poloz_a9010ceee022e8a1f4961b151155d3f55}{run}}();}
+\DoxyCodeLine{100     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_watek_poloz_a93de1805899cebd9994292c5b08294fd}{\_Start}};}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102 signals:}
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_poloz_ad5d9c05b490c240b110d2e4ea5dd444f}{Poloz}}(\textcolor{keywordtype}{int}, \textcolor{keywordtype}{int}, \textcolor{keywordtype}{int});}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109 \};}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{116 \textcolor{keyword}{class }\mbox{\hyperlink{class_watek_com}{WatekCom}} : \textcolor{keyword}{public} QThread}
+\DoxyCodeLine{117 \{}
+\DoxyCodeLine{118     Q\_OBJECT}
+\DoxyCodeLine{119 \textcolor{keyword}{public}:}
+\DoxyCodeLine{123     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_watek_com_a2ab2ca599e87738d01576ba3888584f9}{WatekCom}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{130     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_com_a87c20cd6ab7eec0199adc6f5ba7dff45}{run}}();}
+\DoxyCodeLine{134     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_watek_com_a5dde2314d57ac276d49d1dae078bfd25}{\_Start}};}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{142     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_com_ad36ce2e50aa728a55baabf8831d690c4}{zmien}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{143 signals:}
+\DoxyCodeLine{148     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_com_aba12f7490888f4bdfff29dd8efb734b8}{NumberCh}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{153     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_com_a9612061af361ad4574dd6daffd2f9735}{Status}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{158     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_com_ab67c0a917471619a242f3f5c60e2a0e3}{Koniec}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{159 \};}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 }
+\DoxyCodeLine{170 \textcolor{keyword}{class }\mbox{\hyperlink{class_watek_odbioru}{WatekOdbioru}} : \textcolor{keyword}{public} QThread}
+\DoxyCodeLine{171 \{}
+\DoxyCodeLine{172     Q\_OBJECT}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \textcolor{keyword}{public}:}
+\DoxyCodeLine{179     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_watek_odbioru_a40e1caa84aafe4e148da06eadc72348a}{WatekOdbioru}}(QObject *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{187     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_odbioru_abbb1a58b883bab7d67ec2ee0a709c51e}{run}}();}
+\DoxyCodeLine{191     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_watek_odbioru_aae4ab29e157a0f62f71f0a40f38ab8f4}{\_Start}};}
+\DoxyCodeLine{198     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_odbioru_a303f1b0f7776229a8fba9c3ec36e7e73}{zmien}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{205     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_odbioru_a7c73f21a97b5684869e9fb3ef1dfbe3d}{zakoncz}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{207 signals:}
+\DoxyCodeLine{212     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_watek_odbioru_ae88767a682fd0d59ae5b5bf7659579bb}{Wspolrz}}(\textcolor{keywordtype}{float},\textcolor{keywordtype}{float},\textcolor{keywordtype}{float});}
+\DoxyCodeLine{213 }
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217 \};}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219 }
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 }
+\DoxyCodeLine{222 }
+\DoxyCodeLine{223 }
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 }
+\DoxyCodeLine{226 }
+\DoxyCodeLine{227 }
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 }
+\DoxyCodeLine{235 \textcolor{keyword}{class }\mbox{\hyperlink{class_main_window}{MainWindow}} : \textcolor{keyword}{public} QMainWindow}
+\DoxyCodeLine{236 \{}
+\DoxyCodeLine{237     Q\_OBJECT}
+\DoxyCodeLine{238 }
+\DoxyCodeLine{239     \mbox{\hyperlink{class_watek_com}{WatekCom}} *mCom;}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241     \mbox{\hyperlink{class_watek_poloz}{WatekPoloz}} *mPoloz;}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244 }
+\DoxyCodeLine{245 }
+\DoxyCodeLine{246 \textcolor{keyword}{public}:}
+\DoxyCodeLine{250     \mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{MainWindow}}(QWidget *parent = \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252     \mbox{\hyperlink{class_main_window}{\string~MainWindow}}();}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{261     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_ae6c977219220157db8e2bb91efa738a3}{onNumberCh}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{267     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_adff55ad5842eddb12afddf0058e72d5b}{onStatus}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{273     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_aea3978e3854f6c852a90d2c980d6b6dd}{onKoniec}}(\textcolor{keywordtype}{bool});}
+\DoxyCodeLine{279     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_main_window_a9d6922c5fd038bbe7846cd1839d154c7}{onPoloz}}(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} z);}
+\DoxyCodeLine{280 }
+\DoxyCodeLine{281 \textcolor{keyword}{private} slots:}
+\DoxyCodeLine{285     \textcolor{keywordtype}{void} on\_pushButton\_ustaw\_clicked();}
+\DoxyCodeLine{289     \textcolor{keywordtype}{void} on\_pushButton\_stop\_clicked();}
+\DoxyCodeLine{293     \textcolor{keywordtype}{void} on\_pushButton\_start\_clicked();}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{295 \textcolor{keyword}{private}:}
+\DoxyCodeLine{296     Ui::MainWindow *ui;}
+\DoxyCodeLine{297 \};}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{299 }
+\DoxyCodeLine{300 }
+\DoxyCodeLine{301 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// MAINWINDOW\_H}}
+
+\end{DoxyCode}

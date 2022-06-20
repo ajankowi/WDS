@@ -1,0 +1,126 @@
+\hypertarget{class_main_window}{}\doxysection{Dokumentacja klasy Main\+Window}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+Klasa \mbox{\hyperlink{class_main_window}{Main\+Window}} służy do stworzenia okna aplikacji.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Diagram dziedziczenia dla Main\+Window\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_main_window}
+\end{center}
+\end{figure}
+\doxysubsection*{Sloty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_ae6c977219220157db8e2bb91efa738a3}{on\+Number\+Ch}} (bool)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_watek_com}{Watek\+Com}} Number\+Ch() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_adff55ad5842eddb12afddf0058e72d5b}{on\+Status}} (bool)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_watek_com}{Watek\+Com}} Status() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aea3978e3854f6c852a90d2c980d6b6dd}{on\+Koniec}} (bool)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy Watekcom Koniec() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a9d6922c5fd038bbe7846cd1839d154c7}{on\+Poloz}} (int x, int y, int z)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_watek_poloz}{Watek\+Poloz}} Poloz() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+{\bfseries Main\+Window} (QWidget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Inicjalizacja głównego okna. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa \mbox{\hyperlink{class_main_window}{Main\+Window}} służy do stworzenia okna aplikacji. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_main_window_aea3978e3854f6c852a90d2c980d6b6dd}\label{class_main_window_aea3978e3854f6c852a90d2c980d6b6dd}} 
+\index{MainWindow@{MainWindow}!onKoniec@{onKoniec}}
+\index{onKoniec@{onKoniec}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onKoniec}{onKoniec}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Koniec (\begin{DoxyParamCaption}\item[{bool}]{koni }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Służy do komunikacji z metodą klasy Watekcom Koniec() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & logiczna bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Wyświetla} & komunikat o zakończeniu skanowania \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_main_window_ae6c977219220157db8e2bb91efa738a3}\label{class_main_window_ae6c977219220157db8e2bb91efa738a3}} 
+\index{MainWindow@{MainWindow}!onNumberCh@{onNumberCh}}
+\index{onNumberCh@{onNumberCh}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onNumberCh}{onNumberCh}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Number\+Ch (\begin{DoxyParamCaption}\item[{bool}]{kalib }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_watek_com}{Watek\+Com}} Number\+Ch() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & logiczna bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Wyświetla} & komunikat o kalibracji użytkownikowi \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_main_window_a9d6922c5fd038bbe7846cd1839d154c7}\label{class_main_window_a9d6922c5fd038bbe7846cd1839d154c7}} 
+\index{MainWindow@{MainWindow}!onPoloz@{onPoloz}}
+\index{onPoloz@{onPoloz}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onPoloz}{onPoloz}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Poloz (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_watek_poloz}{Watek\+Poloz}} Poloz() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em x,y,z} & -\/ współrzędne punktu \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Metoda} & wyświetla dostarczone współrzędne w aplikacji \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_main_window_adff55ad5842eddb12afddf0058e72d5b}\label{class_main_window_adff55ad5842eddb12afddf0058e72d5b}} 
+\index{MainWindow@{MainWindow}!onStatus@{onStatus}}
+\index{onStatus@{onStatus}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{onStatus}{onStatus}}
+{\footnotesize\ttfamily void Main\+Window\+::on\+Status (\begin{DoxyParamCaption}\item[{bool}]{zmienna }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_watek_com}{Watek\+Com}} Status() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & logiczna bool \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Zmienia} & kolor diody w zaleznosci czy urzadzenie jest podlaczone \\
+\hline
+\end{DoxyRetVals}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

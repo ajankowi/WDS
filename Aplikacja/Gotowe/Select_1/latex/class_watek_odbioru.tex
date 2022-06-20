@@ -1,0 +1,135 @@
+\hypertarget{class_watek_odbioru}{}\doxysection{Dokumentacja klasy Watek\+Odbioru}
+\label{class_watek_odbioru}\index{WatekOdbioru@{WatekOdbioru}}
+
+
+Klasa \mbox{\hyperlink{class_watek_odbioru}{Watek\+Odbioru}} służy do odbierania danych przesłanych z procesora.  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Diagram dziedziczenia dla Watek\+Odbioru\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_watek_odbioru}
+\end{center}
+\end{figure}
+\doxysubsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_watek_odbioru_ae88767a682fd0d59ae5b5bf7659579bb}{Wspolrz}} (float, float, float)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_viewer}{Viewer}} on\+Wspolrz() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_watek_odbioru_a40e1caa84aafe4e148da06eadc72348a}\label{class_watek_odbioru_a40e1caa84aafe4e148da06eadc72348a}} 
+{\bfseries Watek\+Odbioru} (QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Inicjalizacja wątku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_odbioru_abbb1a58b883bab7d67ec2ee0a709c51e}{run}} ()
+\begin{DoxyCompactList}\small\item\em Uruchamia pracę wątku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_odbioru_a303f1b0f7776229a8fba9c3ec36e7e73}{zmien}} (bool)
+\begin{DoxyCompactList}\small\item\em Zmienia wartość logiczną zmiennej \+\_\+\+Sprawdz. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_odbioru_a7c73f21a97b5684869e9fb3ef1dfbe3d}{zakoncz}} (bool)
+\begin{DoxyCompactList}\small\item\em Metoda zakończająca pracę watku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_watek_odbioru_aae4ab29e157a0f62f71f0a40f38ab8f4}\label{class_watek_odbioru_aae4ab29e157a0f62f71f0a40f38ab8f4}} 
+bool {\bfseries \+\_\+\+Start}
+\begin{DoxyCompactList}\small\item\em Zmienna \+\_\+\+Start umożliwia zabicie wątku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa \mbox{\hyperlink{class_watek_odbioru}{Watek\+Odbioru}} służy do odbierania danych przesłanych z procesora. 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_watek_odbioru_abbb1a58b883bab7d67ec2ee0a709c51e}\label{class_watek_odbioru_abbb1a58b883bab7d67ec2ee0a709c51e}} 
+\index{WatekOdbioru@{WatekOdbioru}!run@{run}}
+\index{run@{run}!WatekOdbioru@{WatekOdbioru}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Watek\+Odbioru\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uruchamia pracę wątku. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em x} & -\/ wartość współrzędnej na osi x \\
+\hline
+\mbox{\texttt{ out}}  & {\em y} & -\/ wartość współrzędnej na osi y \\
+\hline
+\mbox{\texttt{ out}}  & {\em z} & -\/ wartość współrzędnej na osi z \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Wątek} & regularnie odbiera dane przesyłane z procesora \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_watek_odbioru_ae88767a682fd0d59ae5b5bf7659579bb}\label{class_watek_odbioru_ae88767a682fd0d59ae5b5bf7659579bb}} 
+\index{WatekOdbioru@{WatekOdbioru}!Wspolrz@{Wspolrz}}
+\index{Wspolrz@{Wspolrz}!WatekOdbioru@{WatekOdbioru}}
+\doxysubsubsection{\texorpdfstring{Wspolrz}{Wspolrz}}
+{\footnotesize\ttfamily void Watek\+Odbioru\+::\+Wspolrz (\begin{DoxyParamCaption}\item[{float}]{,  }\item[{float}]{,  }\item[{float}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_viewer}{Viewer}} on\+Wspolrz() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & logiczna bool \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_watek_odbioru_a7c73f21a97b5684869e9fb3ef1dfbe3d}\label{class_watek_odbioru_a7c73f21a97b5684869e9fb3ef1dfbe3d}} 
+\index{WatekOdbioru@{WatekOdbioru}!zakoncz@{zakoncz}}
+\index{zakoncz@{zakoncz}!WatekOdbioru@{WatekOdbioru}}
+\doxysubsubsection{\texorpdfstring{zakoncz()}{zakoncz()}}
+{\footnotesize\ttfamily void Watek\+Odbioru\+::zakoncz (\begin{DoxyParamCaption}\item[{bool}]{Koniec }\end{DoxyParamCaption})}
+
+
+
+Metoda zakończająca pracę watku. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & typu bool \\
+\hline
+\mbox{\texttt{ out}}  & {\em Wartość} & zmiennej wejściowej \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Umożliwia} & zmianę stanu logicznego dla zmiennej \+\_\+\+Start \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_watek_odbioru_a303f1b0f7776229a8fba9c3ec36e7e73}\label{class_watek_odbioru_a303f1b0f7776229a8fba9c3ec36e7e73}} 
+\index{WatekOdbioru@{WatekOdbioru}!zmien@{zmien}}
+\index{zmien@{zmien}!WatekOdbioru@{WatekOdbioru}}
+\doxysubsubsection{\texorpdfstring{zmien()}{zmien()}}
+{\footnotesize\ttfamily void Watek\+Odbioru\+::zmien (\begin{DoxyParamCaption}\item[{bool}]{Zmiana }\end{DoxyParamCaption})}
+
+
+
+Zmienia wartość logiczną zmiennej \+\_\+\+Sprawdz. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & typu bool \\
+\hline
+\mbox{\texttt{ out}}  & {\em Wartość} & zmiennej wejściowej \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Umożliwia} & zmianę stanu logicznego dla zmiennej \+\_\+\+Sprawdz \\
+\hline
+\end{DoxyRetVals}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

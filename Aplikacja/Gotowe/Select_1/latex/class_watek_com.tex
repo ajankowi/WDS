@@ -1,0 +1,143 @@
+\hypertarget{class_watek_com}{}\doxysection{Dokumentacja klasy Watek\+Com}
+\label{class_watek_com}\index{WatekCom@{WatekCom}}
+
+
+Klasa \mbox{\hyperlink{class_watek_com}{Watek\+Com}} służy do sprawdzania połączenia między procesoerm a aplikacją  
+
+
+
+
+{\ttfamily \#include $<$mainwindow.\+h$>$}
+
+Diagram dziedziczenia dla Watek\+Com\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_watek_com}
+\end{center}
+\end{figure}
+\doxysubsection*{Sygnały}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_watek_com_aba12f7490888f4bdfff29dd8efb734b8}{Number\+Ch}} (bool)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_main_window}{Main\+Window}} on\+Number\+Char() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_com_a9612061af361ad4574dd6daffd2f9735}{Status}} (bool)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_main_window}{Main\+Window}} on\+Status() \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_com_ab67c0a917471619a242f3f5c60e2a0e3}{Koniec}} (bool)
+\begin{DoxyCompactList}\small\item\em Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_main_window}{Main\+Window}} on\+Koniec() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_watek_com_a2ab2ca599e87738d01576ba3888584f9}\label{class_watek_com_a2ab2ca599e87738d01576ba3888584f9}} 
+{\bfseries Watek\+Com} (QObject $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Inicjalizacja wątku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_com_a87c20cd6ab7eec0199adc6f5ba7dff45}{run}} ()
+\begin{DoxyCompactList}\small\item\em Uruchamia pracę wątku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_watek_com_ad36ce2e50aa728a55baabf8831d690c4}{zmien}} (bool)
+\begin{DoxyCompactList}\small\item\em Zmienia wartość logiczną zmiennej \+\_\+\+Sprawdz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atrybuty publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_watek_com_a5dde2314d57ac276d49d1dae078bfd25}\label{class_watek_com_a5dde2314d57ac276d49d1dae078bfd25}} 
+bool {\bfseries \+\_\+\+Start}
+\begin{DoxyCompactList}\small\item\em Zmienna \+\_\+\+Start umożliwia zabicie wątku. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Opis szczegółowy}
+Klasa \mbox{\hyperlink{class_watek_com}{Watek\+Com}} służy do sprawdzania połączenia między procesoerm a aplikacją 
+
+\doxysubsection{Dokumentacja funkcji składowych}
+\mbox{\Hypertarget{class_watek_com_ab67c0a917471619a242f3f5c60e2a0e3}\label{class_watek_com_ab67c0a917471619a242f3f5c60e2a0e3}} 
+\index{WatekCom@{WatekCom}!Koniec@{Koniec}}
+\index{Koniec@{Koniec}!WatekCom@{WatekCom}}
+\doxysubsubsection{\texorpdfstring{Koniec}{Koniec}}
+{\footnotesize\ttfamily void Watek\+Com\+::\+Koniec (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_main_window}{Main\+Window}} on\+Koniec() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & logiczna bool \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_watek_com_aba12f7490888f4bdfff29dd8efb734b8}\label{class_watek_com_aba12f7490888f4bdfff29dd8efb734b8}} 
+\index{WatekCom@{WatekCom}!NumberCh@{NumberCh}}
+\index{NumberCh@{NumberCh}!WatekCom@{WatekCom}}
+\doxysubsubsection{\texorpdfstring{NumberCh}{NumberCh}}
+{\footnotesize\ttfamily void Watek\+Com\+::\+Number\+Ch (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_main_window}{Main\+Window}} on\+Number\+Char() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & logiczna bool \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_watek_com_a87c20cd6ab7eec0199adc6f5ba7dff45}\label{class_watek_com_a87c20cd6ab7eec0199adc6f5ba7dff45}} 
+\index{WatekCom@{WatekCom}!run@{run}}
+\index{run@{run}!WatekCom@{WatekCom}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Watek\+Com\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Uruchamia pracę wątku. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ out}}  & {\em True} & -\/ jeżeli urządzenia są połączone \\
+\hline
+\mbox{\texttt{ out}}  & {\em False} & -\/ jeżeli urządzenia nie są połączone \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Wątek} & regularnie sprawdza połączenie pomiędzy urządzeniami \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{class_watek_com_a9612061af361ad4574dd6daffd2f9735}\label{class_watek_com_a9612061af361ad4574dd6daffd2f9735}} 
+\index{WatekCom@{WatekCom}!Status@{Status}}
+\index{Status@{Status}!WatekCom@{WatekCom}}
+\doxysubsubsection{\texorpdfstring{Status}{Status}}
+{\footnotesize\ttfamily void Watek\+Com\+::\+Status (\begin{DoxyParamCaption}\item[{bool}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+Służy do komunikacji z metodą klasy \mbox{\hyperlink{class_main_window}{Main\+Window}} on\+Status() 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & logiczna bool \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_watek_com_ad36ce2e50aa728a55baabf8831d690c4}\label{class_watek_com_ad36ce2e50aa728a55baabf8831d690c4}} 
+\index{WatekCom@{WatekCom}!zmien@{zmien}}
+\index{zmien@{zmien}!WatekCom@{WatekCom}}
+\doxysubsubsection{\texorpdfstring{zmien()}{zmien()}}
+{\footnotesize\ttfamily void Watek\+Com\+::zmien (\begin{DoxyParamCaption}\item[{bool}]{Zmiana }\end{DoxyParamCaption})}
+
+
+
+Zmienia wartość logiczną zmiennej \+\_\+\+Sprawdz. 
+
+
+\begin{DoxyParams}[1]{Parametry}
+\mbox{\texttt{ in}}  & {\em Zmienna} & typu bool \\
+\hline
+\mbox{\texttt{ out}}  & {\em Wartość} & zmiennej wejściowej \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Zwracane wartości}
+{\em Umożliwia} & zmianę stanu logicznego dla zmiennej \+\_\+\+Sprawdz \\
+\hline
+\end{DoxyRetVals}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+mainwindow.\+h\item 
+mainwindow.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+\hypertarget{viewer_8h_source}{}\doxysection{viewer.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef ANIMATION\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define ANIMATION\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <QGLViewer/qglviewer.h>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}mainwindow.h"{}}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_viewer}{Viewer}};}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{class_particle}{Particle}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{16   \mbox{\hyperlink{class_particle}{Particle}}();}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{21   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_af0fa0db02a3ff8013d1e17887ada9f5e}{init}}();}
+\DoxyCodeLine{27   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_particle_acb2a845b3a6fdf56d77431025c6fc28d}{draw}}(\textcolor{keywordtype}{bool} special);}
+\DoxyCodeLine{31   qglviewer::Vec \mbox{\hyperlink{class_particle_aec826482285bcf161918072ae70888e5}{pos\_}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keyword}{private}:}
+\DoxyCodeLine{34   qglviewer::Vec speed\_;}
+\DoxyCodeLine{35   \textcolor{keywordtype}{int} age\_, ageMax\_;}
+\DoxyCodeLine{36 \};}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 }
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 }
+\DoxyCodeLine{49 \textcolor{keyword}{class }\mbox{\hyperlink{class_viewer}{Viewer}} : \textcolor{keyword}{public} QGLViewer \{}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{54     \mbox{\hyperlink{class_watek_odbioru}{WatekOdbioru}} *mOdbior;}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{comment}{//MainWindow *te;}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{keyword}{public}:}
+\DoxyCodeLine{62   \mbox{\hyperlink{class_viewer_ab896466e9a6e6a8b2cee163ff8156f01}{Viewer}}(QWidget *parent);}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{71   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_viewer_a9ce9d06343c4e089ac76b19f78fe29e4}{draw}}();}
+\DoxyCodeLine{77   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_viewer_a255cc2d6f55fc8565e614618d41589b1}{init}}();}
+\DoxyCodeLine{83   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_viewer_a44a1fdc00879f57de942fb54760b7711}{drawWithNames}}();}
+\DoxyCodeLine{89   \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_viewer_aed885858645c43559de13e29ec0735a5}{postSelection}}(\textcolor{keyword}{const} QPoint \&point);}
+\DoxyCodeLine{95   \textcolor{keyword}{virtual} QString \mbox{\hyperlink{class_viewer_abb55fd0b89d44d49094f828025813057}{helpString}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97 \textcolor{keyword}{private}:}
+\DoxyCodeLine{101   \textcolor{keywordtype}{int} nbPart\_;}
+\DoxyCodeLine{105   \mbox{\hyperlink{class_particle}{Particle}} *particle\_;}
+\DoxyCodeLine{109   \mbox{\hyperlink{class_punkt}{Punkt}} *point\_;}
+\DoxyCodeLine{110   qglviewer::Vec selectedPoint, dir, orig;}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_viewer_ac995b4f8aa3bc69e28eda9b20231aa7d}{onWspolrz}}(\textcolor{keywordtype}{float},\textcolor{keywordtype}{float},\textcolor{keywordtype}{float});}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{122 \};}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ANIMATION\_H}}
+
+\end{DoxyCode}
