@@ -35,7 +35,6 @@ volatile int co_robi;
 int a;
 int b;
 int c;
-// 1 - wysyla wartosci do skanera
 
 
 
@@ -45,7 +44,7 @@ void Punkt::ustawPoloz(int x, int y, int z){
     b = y;
     c = z;
 
-    cout << "x: " << a << "  y: " << b << "  z: " << c << endl;
+   //cout << "x: " << a << "  y: " << b << "  z: " << c << endl;
 
 }
 
@@ -65,14 +64,11 @@ void WatekPoloz::run(){
     int bo = 0;
     int co = 0;
 
-    //cout << "zyje" << endl;
-
     while(_Start){
         if((ao != a)||(bo != b)||(co != c)){
             ao = a;
             bo = b;
             co = c;
-            //cout << "zyje 2" << endl;
             emit Poloz(a,b,c);
         }
          msleep(500);
@@ -109,11 +105,9 @@ void WatekCom::run(){
         }
 
         if(co_robi == 4){
-            //cout << "Halo" << endl;
             emit Koniec(true);
             co_robi = 5;
         }
-        //TUTAJ
         SetTransParam(DeskPortu);
         msleep(500);
 
@@ -123,6 +117,8 @@ void WatekCom::run(){
 void WatekCom::zmien(bool Zmiana){
     _Sprawdz = Zmiana;
 }
+
+
 
 
 
@@ -174,8 +170,6 @@ void WatekOdbioru::run(){
                     cerr << ":( Blad otwarcia portu /dev/ttyUSB0" << endl;
                 }
                 polacz = false;
-                //TUTAJ
-                //SetTransParam(DeskPortu);
             }
             if(RS232_Odbierz(DeskPortu,Bufor,1000,100)) {
                 std::istringstream IStrm(Bufor);
@@ -184,7 +178,6 @@ void WatekOdbioru::run(){
                 if (IStrm.fail() || FHeader != 'X' ){
                     cout << "Bledna ramka danych!" << endl;
                 }
-                //cout << x << y << z << endl;
 
                 if((x==8889)&&(y==8889)&&(z==8889)&&flaga){
                     _Kalibracja = true;
@@ -218,10 +211,8 @@ MainWindow::MainWindow(QWidget *parent)
     co_robi = 1;
      _Kalibracja = false;
 
-    //mWatek = new WatekOdbioru(this);
     mCom = new WatekCom(this);
     mPoloz = new WatekPoloz(this);
-    //mViewer = new Viewer(this);
 
     mCom->start();
     mPoloz->start();
@@ -237,20 +228,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->_pLabel_N_var->setRange(0,64);
     ui->_pLabel_H_var->setRange(0,9);
 
-
-
-    // Oba dzialaja
-
-    //connect(mWatek,&WatekOdbioru::NumberCh,this,&MainWindow::onNumberCh);
-    //connect(mWatek,SIGNAL(NumberCh(QString)),this,SLOT(onNumberCh(QString)), Qt::DirectConnection);
-
-    //connect(mWatek,SIGNAL(Wspolrz(int,int,int)),mViewer,SLOT(onWspolrz(int,int,int)), Qt::DirectConnection);
-    //connect(mWatek,&WatekOdbioru::Wspolrz,mViewer,&Viewer::onWspolrz);
-    //connect(mWatek,&WatekOdbioru::Wspolrz,this,&Viewer::onWspolrz);
-
-    //Przyklad sygnalu
-    //connect(ui->horizontalSlider,SIGNAL(valueChanged(int)),ui->progressBar,SLOT(setValue(int)));
-
 }
 
 MainWindow::~MainWindow()
@@ -261,7 +238,6 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::onNumberCh(bool kalib){
-    //ui->_pLabel_N_var->setText(Nazwa);
      if(kalib){
          QMessageBox::about(this,tr("Komunikat"),tr("Kalibracja przebiegła poprawnie \nMożna rozpocząć skanowanie"));
      }
@@ -280,7 +256,7 @@ void MainWindow::onPoloz(int x, int y, int z){
     int bo = 0;
     int co = 0;
 
-    cout << "Uruchamia sie!" << endl;
+    //cout << "Uruchamia sie!" << endl;
 
     if((ao != x)||(bo != y)||(co != z)){
          ui->_pLabel_x_var->setText(QString::number(x));
@@ -313,9 +289,6 @@ void MainWindow::onStatus(bool zmienna){
 }
 
 void MainWindow::on_pushButton_ustaw_clicked(){
-    //ui->_pLabel_N_var->setText("ustaw");
-    //Przyklad wiadomosci
-    //QMessageBox::about(this,"Moj tytul","To jest bardzo wazna wiadomosc, której nie można pominac");
 
     int n = 0;
     int h = 0;
@@ -347,10 +320,6 @@ void MainWindow::on_pushButton_stop_clicked(){
 
     TestNadawania("4 4 997@");
 
-
-    //ui->_pLabel_H_var->setText("stop");
-    //mWatek->_Start = false;
-
 }
 
 void MainWindow::on_pushButton_start_clicked(){
@@ -367,6 +336,5 @@ void MainWindow::on_pushButton_start_clicked(){
     else{
         QMessageBox::warning(this,tr("Ostrzeżenie"),tr("Należy ustawić parametry!"));
     }
-     //mWatek->start();
-     //mOdbior->start();
+
 }

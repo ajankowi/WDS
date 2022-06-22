@@ -96,6 +96,8 @@ public:
     void run();
     /**
      * @brief Zmienna _Start umożliwia zabicie wątku
+     * @brief True - wątek żyje
+     * @brief False - wątek zostaje zabity
      */
     bool _Start;
 
@@ -135,7 +137,7 @@ public:
 
     /**
      * @brief Zmienia wartość logiczną zmiennej _Sprawdz
-     * @param[in] Zmienna typu bool
+     * @param[in] Zmienna _SPpawdz
      * @param[out] Wartość zmiennej wejściowej
      * @retval Umożliwia zmianę stanu logicznego dla zmiennej _Sprawdz
      */
@@ -143,17 +145,17 @@ public:
 signals:
     /**
      * @brief Służy do komunikacji z metodą klasy MainWindow onNumberChar()
-     * @param[in] Zmienna logiczna bool
+     * @param[in] Zmienna logiczna kalib, która odpowiada za kalibrację skanera
      */
     void NumberCh(bool);
     /**
      * @brief Służy do komunikacji z metodą klasy MainWindow onStatus()
-     * @param[in] Zmienna logiczna bool
+     * @param[in] Zmienna logiczna _Status
      */
     void Status(bool);
     /**
      * @brief Służy do komunikacji z metodą klasy MainWindow onKoniec()
-     * @param[in] Zmienna logiczna bool
+     * @param[in] Zmienna logiczna _Status
      */
     void Koniec(bool);
 };
@@ -170,7 +172,6 @@ signals:
 class WatekOdbioru : public QThread
 {
     Q_OBJECT
-
 
 public:
     /**
@@ -191,14 +192,14 @@ public:
     bool _Start;
     /**
      * @brief Zmienia wartość logiczną zmiennej _Sprawdz
-     * @param[in] Zmienna typu bool
+     * @param[in] Zmienna _Sprawdz
      * @param[out] Wartość zmiennej wejściowej
      * @retval Umożliwia zmianę stanu logicznego dla zmiennej _Sprawdz
      */
     void zmien(bool);
     /**
      * @brief Metoda zakończająca pracę watku
-     * @param[in] Zmienna typu bool
+     * @param[in] Zmienna _Start
      * @param[out] Wartość zmiennej wejściowej
      * @retval Umożliwia zmianę stanu logicznego dla zmiennej _Start
      */
@@ -222,11 +223,6 @@ public slots:
 
 
 
-
-
-
-
-
 /**
  * @brief Klasa MainWindow służy do stworzenia okna aplikacji
  */
@@ -237,10 +233,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
     WatekCom *mCom;
-
     WatekPoloz *mPoloz;
-
-
 
 
 public:
@@ -248,26 +241,25 @@ public:
      * @brief Inicjalizacja głównego okna
      */
     MainWindow(QWidget *parent = nullptr);
-
     ~MainWindow();
 
 
 public slots:
     /**
      * @brief Służy do komunikacji z metodą klasy WatekCom NumberCh()
-     * @param[in] Zmienna logiczna bool
+     * @param[in] Zmienna logiczna _Status
      * @retval Wyświetla komunikat o kalibracji użytkownikowi
      */
     void onNumberCh(bool);
     /**
      * @brief Służy do komunikacji z metodą klasy WatekCom Status()
-     * @param[in] Zmienna logiczna bool
+     * @param[in] Zmienna logiczna _Status
      * @retval Zmienia kolor diody w zaleznosci czy urzadzenie jest podlaczone
      */
     void onStatus(bool);
     /**
      * @brief Służy do komunikacji z metodą klasy Watekcom Koniec()
-     * @param[in] Zmienna logiczna bool
+     * @param[in] Zmienna logiczna _Koniec
      * @retval Wyświetla komunikat o zakończeniu skanowania
      */
     void onKoniec(bool);

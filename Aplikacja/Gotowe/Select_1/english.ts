@@ -56,7 +56,7 @@
     <message>
         <location filename="mainwindow.ui" line="261"/>
         <source>Współrzędne</source>
-        <translation>Coordinates</translation>
+        <translation>co-ordinates</translation>
     </message>
     <message>
         <location filename="mainwindow.ui" line="271"/>

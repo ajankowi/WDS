@@ -11,20 +11,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-
-    /*
-    QTranslator translator;
-    const QStringList uiLanguages = QLocale::system().uiLanguages();
-    for (const QString &locale : uiLanguages) {
-        const QString baseName = "Thread_" + QLocale(locale).name();
-        if (translator.load(":/i18n/" + baseName)) {
-            a.installTranslator(&translator);
-            break;
-        }
-    }
-    */
-
-     QTranslator t;
+    QTranslator t;
     QStringList languages;
 
     languages << "Polski" << "English";
@@ -46,21 +33,3 @@ int main(int argc, char *argv[])
     w.show();
     return a.exec();
 }
-
-
-/*
-#include "viewer.h"
-#include <qapplication.h>
-
-int main(int argc, char **argv) {
-  QApplication application(argc, argv);
-
-  Viewer viewer;
-
-  viewer.setWindowTitle("animation");
-
-  viewer.show();
-
-  return application.exec();
-}
-*/

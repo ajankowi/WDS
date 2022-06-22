@@ -52,4 +52,4 @@ DISTFILES += \
     img/green.png
 
 RESOURCES += \
-    tranla.qrc
+    translation-2.qrc

@@ -18,12 +18,8 @@ Viewer::Viewer(QWidget *parent) : QGLViewer(parent) {
 
     mOdbior = new WatekOdbioru(this);
 
-
-
-    //connect(mWatek,&WatekOdbioru::NumberCh,this,&MainWindow::onNumberCh);
-    //connect(mOdbior,SIGNAL(Wspolrz(int,int,int)),this,SLOT(onWspolrz(int, int, int)), Qt::DirectConnection);
     connect(mOdbior,&WatekOdbioru::Wspolrz,this,&Viewer::onWspolrz);
-    //mOdbior->zmien(false);
+
     mOdbior->start();
 
 }
@@ -36,7 +32,6 @@ void Viewer::onWspolrz(float x, float y, float z){
     static int a = 2;
     a++;
 
-    //cout << "Watek: " << x/100 << ", " << y/100 << ", " << z/100 << ", a: " << a << endl;
     if((x == 144)&&(y == 144)&&(z == 144)){
         mOdbior->zakoncz(true);
 
@@ -88,15 +83,6 @@ void Viewer::draw() {
   glVertex3fv(orig);
   glVertex3fv(orig + 100.0 * dir);
   glEnd();
-
-  // Draw (approximated) intersection point on selected object
-  //if (selectedName() >= 0) {
-  //  glColor3f(0.9f, 0.2f, 0.1f);
-  //  glBegin(GL_POINTS);
-   // glVertex3fv(selectedPoint);
-   // glEnd();
-  //}
-
 
 }
 
@@ -180,18 +166,8 @@ void Particle::draw(bool special) {
   else
      glColor3f(1.0, 1.0, 1.0);
   glVertex3fv(pos_);
-
-  //glVertex3fv(Vec(0.25, 0.23, 0.22));
-  //glVertex3fv(Vec(-0.50, -0.50,-0.50));
-}//
+}
 
 void Particle::init() {
-
   pos_ = Vec(-10, -10, -10);
-
-  //float angle = 2.0 * M_PI;
-  //float norm = 0.04;
-  //speed_ = Vec(0.5, 0.5,0.5);
-  //age_ = 0;
-  //ageMax_ = 50 + static_cast<int>(100.0 * rand() / RAND_MAX);
 }
